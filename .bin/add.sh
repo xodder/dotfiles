@@ -2,9 +2,6 @@
 
 source "$SCRIPT_DIR/.bin/shared.sh"
 
-REFS_DIR=$(realpath "${SCRIPT_DIR}/refs")
-MANIFEST="$SCRIPT_DIR/manifest.txt"
-
 force=0
 if [ "$1" = "-f" ]; then 
   force=1; shift
