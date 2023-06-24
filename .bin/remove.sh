@@ -2,33 +2,45 @@
 
 source "$SCRIPT_DIR/.bin/shared.sh"
 
-arg="$1"
+echo "[INFO] Removing files..."
 
-# resolve file relative to home dir
-filepath=$(realpath "$arg")
+while [ "$#" -gt "0" ]; do
+  arg="$1"
 
-# extract just the filename
-filename=$(basename "$filepath")
+  # resolve file relative to home dir
+  filepath=$(realpath "$arg")
 
-# generate manifest entry
-entry=$(generate_manifest_entry "$filepath")
+  # extract just the filename
+  filename=$(basename "$filepath")
 
-# check if a definition exists inside the manifest, if so, revert the addition
-# process, then remove from manifest
-exists=$(is_entry_in_manifest "$entry")
+  # generate manifest entry
+  entry=$(generate_manifest_entry "$filepath")
 
-if [ "$exists" -gt "0" ]; then
-  # revert
-  src=$(manifest_entry_src "$entry" "--full")
-  dst=$(manifest_entry_dst "$entry" "--full")
+  # check if a definition exists inside the manifest, if so, revert the addition
+  # process, then remove from manifest
+  exists=$(is_entry_in_manifest "$entry")
 
-  # del link
-  [ -L "$dst" ] && unlink $dst
+  if [ "$exists" -gt "0" ]; then
+    # revert
+    src=$(manifest_entry_src "$entry" "--full")
+    dst=$(manifest_entry_dst "$entry" "--full")
 
-  # move src to dst
-  mv "$src" "$dst"
+    # del link
+    [ -L "$dst" ] && unlink $dst
 
-  # remove entry from manifest
-  manifest_entry_remove "$entry"
-fi
+    # move src to dst
+    mv "$src" "$dst"
 
+    # remove entry from manifest
+    manifest_entry_remove "$entry"
+
+    echo "[INFO] removed $arg"
+  else
+    echo "[ERROR] didn't remove $arg (non-existent)"
+  fi
+
+  # move to next arg
+  shift
+done 
+
+echo "[INFO] done"
