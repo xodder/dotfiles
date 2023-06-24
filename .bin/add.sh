@@ -30,17 +30,18 @@ while [ "$#" -gt "0" ]; do
     fi
 
     if [ "$proceed" -gt "0" ]; then
-      # move file into ref and symlink back to original location
-      # TODO:
-
       # generate manifest entry
       entry=$(generate_manifest_entry $filepath)
 
-      # remove entry from manifest if it exists
-      sed -i '' "\#$entry#d" "$MANIFEST"
+      src=$(manifest_entry_src "$entry" "--full")
+      dst=$(manifest_entry_dst "$entry" "--full")
 
-      # add entry into manifest
-      echo "$entry" >> "$MANIFEST"
+      # move file into ref and symlink back to original location
+      mv "$dst" "$src"
+      symlink "$src" "$dst"
+
+      manifest_entry_remove "$entry"
+      manifest_entry_insert "$entry"
 
       echo "[INFO] added $arg"
     else
