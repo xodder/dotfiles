@@ -75,17 +75,5 @@ is_entry_in_manifest() {
 }
 
 symlink() {
-  src=$1
-  dst=$2
-  
-  if [ ! -L "$dst" ]; then
-    if [ -e "$dst" ]; then
-      echo "[ERROR] couldn't link $dst (exists and not a symlink)" && exit 1
-    else
-      ln -s "$src" "$destination"
-      echo "[INFO] linked $src -> $dst"
-    fi
-  else
-    echo "[INFO] $src already linked"
-  fi
+  ln -s "$1" "$2"
 }

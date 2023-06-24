@@ -8,8 +8,8 @@ export SCRIPT_DIR
 export REFS_DIR
 export MANIFEST
 
-# move into script dir
-# cd "$SCRIPT_DIR"
+[ ! -e "$REFS_DIR" ] && $(mkdir "$REFS_DIR")
+[ ! -e "$MANIFEST" ] && $(touch "$MANIFEST")
 
 main() {
   argc=$#

@@ -1,3 +1,0 @@
-.zshrc:link:~/.zshrc
-.vim:link:~/.vim
-.ssh:link:~/.ssh
