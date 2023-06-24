@@ -13,33 +13,37 @@ fi
 echo "[INFO] Adding files..."
 
 while [ "$#" -gt "0" ]; do
-  # resolve input file path relative to home
   arg=$1
+
+  # resolve input file path relative to home
   filepath=$(realpath $arg)
+
+  # extract just the filename
   filename=$(basename $filepath)
 
-  # ensure src exists
+  # ensure file exists
   if [ -e $filepath ]; then
     proceed=1
-    # move into this place and symlink back to original location
 
     # does file already exist here?, if so ask if we should replace it
-    if [ "$force" -lt "1" ]; then
-      if [ -e "${REFS_DIR}/${filename}" ]; then
-        confirm "$arg already added. Replace"
-        proceed=$?
-        echo "" # go to next line
-      fi
+    if [ "$force" -lt "1" ] && [ -e "${REFS_DIR}/${filename}" ]; then
+      confirm "$arg already added. Replace"
+      proceed=$?
+      echo "" # go to next line
     fi
 
     if [ "$proceed" -gt "0" ]; then
-      line=$(generate_manifest_entry $filepath)
+      # move file into ref and symlink back to original location
+      # TODO:
 
-      # remove record from manifest if it exists
-      sed -i '' "\#$line#d" "$MANIFEST"
+      # generate manifest entry
+      entry=$(generate_manifest_entry $filepath)
 
-      # add record into manifest
-      echo $line >> "$MANIFEST"
+      # remove entry from manifest if it exists
+      sed -i '' "\#$entry#d" "$MANIFEST"
+
+      # add entry into manifest
+      echo "$entry" >> "$MANIFEST"
 
       echo "[INFO] added $arg"
     else
