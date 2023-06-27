@@ -11,6 +11,48 @@ realpath() {
   echo "$realpath"
 }
 
+abspath() {
+  path=$1
+  cwd=$(pwd)
+
+  # handle non-relative paths
+  if [ $(echo "$path" | grep '^/' > /dev/null) ]; then
+    printf '%s\n' "$path" && exit
+  fi
+
+  # keep moving into parent dir as long as path starts with '..'
+  while [[ $path =~ ".." ]]; do
+    # we are already at the root dir, it's not possible to go backward
+    if [ "$cwd" = '/' ]; then
+      echo 'Invalid relative path\n' >&2
+      exit 1
+    fi
+
+    # strip off the ..
+    if [ "$path" = '..' ]; then
+      path=
+    else
+      path=$(echo "$path" | sed 's#^\.\./##') 
+    fi
+
+    # then move into parent dir
+    cwd=$(dirname "$cwd")
+  done
+
+  # remove the '/' at the end of the dir we're currently in
+  cwd=$(echo "$cwd" | sed 's#/$##')
+
+  # do we have an empty path?
+  if [ -z "$path" ]; then
+    if [ -z "$cwd" ]; then
+      cwd='/'
+    fi
+    printf '%s\n' "$cwd"
+  else
+    printf '%s/%s\n' "$cwd" "$path"
+  fi
+}
+
 simplifypath() {
   [[ $1 =~ ^"$HOME"(/|$) ]] && echo "~${1#$HOME}" || echo $1
 }
@@ -38,7 +80,7 @@ manifest_entry_src() {
   src=$(echo $1 | cut -d : -f 1)
 
   [ "$2" = "--full" ] \
-    && src=$(realpath "${REFS_DIR}/${src}")
+    && src=$(abspath "${REFS_DIR}/${src}")
   
   echo "$src"
 }
