@@ -1,28 +1,48 @@
 #!/bin/bash
 
-link_file() {
-  src=$1
-  dst=$2
+source "$SCRIPT_DIR/.bin/shared.sh"
 
-  echo $src
-  echo $dst
-}
+echo "[INFO] Installing manifest..."
 
-manifest=${1:-"$SCRIPT_DIR/manifest.txt"}
 delim=":"
 
-for line in $(cat $manifest); do
-  filename=$(echo $line    | cut -d $delim -f 1)
-  operation=$(echo $line   | cut -d $delim -f 2)
-  destination=$(echo $line | cut -d $delim -f 3)
+for entry in $(cat $MANIFEST); do
+  filename=$(manifest_entry_src "$entry")
+  src=$(manifest_entry_src "$entry" "--full")
+  dst=$(manifest_entry_dst "$entry" "--full")
+  operation=$(manifest_entry_operation "$entry")
 
   case $operation in
     link)
-      link_file "$filename" "$destination"
+      skip=0
+
+      # does the file already exist?
+      if [ -e "$dst" ]; then
+        skip=1 # skip linking is default if file exists
+
+        # is it linked?
+        if [ -L "$dst" ]; then 
+          replace=$(confirm "$filename already linked. Relink?")
+          echo ""
+
+          if [ $replace -gt "0" ]; then
+            rm -rf "$dst"
+            skip=0 # don't have to skip linking again
+          fi
+        fi
+      fi
+
+      if [ "$skip" -eq "0" ]; then
+        symlink "$src" "$dst" 
+        echo "[INFO] linked $filename"
+      else
+        echo "[INFO] skipped $filename (exists)"
+      fi
       ;;
     *)
-      echo "Unknown operation ($operation). Skipping..."
-      ;;
+      echo "Unknown operation ($operation). Skipping..." ;;
   esac
 done
+
+echo "[INFO] Done"
 

@@ -61,8 +61,8 @@ confirm() {
   while true; do
     read -n 1 -p "[CONFIRM] $1 (y/n) " answer
     case $answer in
-      [Yy]* ) return 1;;
-      [Nn]* ) return 0;;
+      [Yy]* ) echo "1" && exit;;
+      [Nn]* ) echo "0" && exit;;
       * ) ;;
     esac
   done
