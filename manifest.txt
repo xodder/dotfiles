@@ -1,0 +1,4 @@
+.testfile_a:link:~/.testfile_a
+.testfile_b:link:~/.testfile_b
+.testfile_c:link:~/.testfile_c
+.testfile_d:link:~/.testfile_d

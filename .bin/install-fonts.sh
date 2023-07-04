@@ -10,7 +10,7 @@ install_font() {
 
   cd "$HOME/Downloads"
 
-  echo "Installing ${name}..."
+  echo "[INFO] Installing ${name}..."
 
   # create tmp dir
   mkdir tmp_dirname && cd tmp_dirname
@@ -28,13 +28,13 @@ install_font() {
   # delete tmp dir
   cd .. && rm -rf "${tmp_dirname}"
 
-  echo "Installation complete"
+  echo "[INFO] Installation complete"
 
   # return to original location
   cd "${cached_dir}"
 }
 
-echo "Installing fonts..."
+echo "[INFO] Installing fonts..."
 
 # download cozette
 cozette_version="v.1.20.0"

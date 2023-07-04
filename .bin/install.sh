@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Setting up Mac..."
+echo "[INFO] Setting up Mac..."
 
 # Install homebrew
 # sh "$SCRIPT_DIR/.bin/install-homebrew.sh"
@@ -20,4 +20,9 @@ sh "$SCRIPT_DIR/.bin/install-manifest.sh"
 
 # Configure Mac
 # Set macOS preferences - running this last because it will reload the shell
-# source "./.macos"
+
+echo "[INFO] Configuring Mac..."
+
+# source "../.macos"
+
+echo "[INFO] Done"
