@@ -2,6 +2,13 @@
 
 source "$SCRIPT_DIR/.bin/shared.sh"
 
+if [ "$#" -eq 0 ]; then
+  echo "[ERROR] no files specified"
+  echo "usage: "
+  echo "  dotfiles add <file1> [...<files>]" 
+  exit
+fi
+
 # force=0
 # if [ "$1" = "-f" ]; then 
 #   force=1; shift

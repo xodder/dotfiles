@@ -2,6 +2,13 @@
 
 source "$SCRIPT_DIR/.bin/shared.sh"
 
+if [ "$#" -eq 0 ]; then
+  echo "[ERROR] no files specified"
+  echo "usage: "
+  echo "  dotfiles rm <file1> [...<files>]" 
+  exit
+fi
+
 echo "[INFO] Removing files..."
 
 while [ "$#" -gt "0" ]; do
