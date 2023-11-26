@@ -15,8 +15,8 @@ abspath() {
   path=$1
   cwd=$(pwd)
 
-  # handle non-relative paths
-  if [ $(echo "$path" | grep '^/' > /dev/null) ]; then
+  # handle non-relative paths, does path start with a /?
+  if [[ $path =~ "/" ]]; then
     printf '%s\n' "$path" && exit
   fi
 
@@ -68,34 +68,31 @@ confirm() {
   done
 }
 
-generate_manifest_entry() {
+generate_linkable_manifest_entry() {
   filepath=$1 # we are expecting a filepath
-  src=$(simplifypath $filepath)
-  dst=$(basename $filepath)        # just the filename
 
-  echo "${dst}:link:${src}"
+  operation="link"
+  value=$(simplifypath $filepath | sed -e "s#^~/##")
+
+  echo "${operation}:${value}"
 }
 
-manifest_entry_src() {
-  src=$(echo $1 | cut -d : -f 1)
+manifest_entry_path() {
+  path="$(echo $1 | cut -d : -f 2)"
 
-  [ "$2" = "--full" ] \
-    && src=$(abspath "${REFS_DIR}/${src}")
-  
-  echo "$src"
+  [[ "$2" = "--sys" ]] && \
+    path="$HOME/${path}" || \
+    path="$REFS_DIR/${path}"
+
+  echo "$path"
 }
 
-manifest_entry_operation() {
+manifest_entry_key() {
   echo "$(echo $1 | cut -d : -f 2)"
 }
 
-manifest_entry_dst() {
-  dst=$(echo $1 | cut -d : -f 3)
-
-  [ "$2" = "--full" ] \
-    && dst=$(echo "$dst" | sed -e "s#^~#$HOME#") # replace ~ with actual path
-
-  echo "$dst"
+manifest_entry_operation() {
+  echo "$(echo $1 | cut -d : -f 1)"
 }
 
 manifest_entry_remove() {
@@ -114,6 +111,29 @@ is_entry_in_manifest() {
   done
 
   echo 0
+}
+
+manifest_entry_get() {
+  for entry in $(cat "$MANIFEST"); do
+    if [ "$(manifest_entry_key "$entry")" = "$1" ]; then
+      echo "$entry" && exit
+    fi
+  done
+
+  echo ""
+}
+
+manifest_entry_keys() {
+  prefix=$1
+  keys=""
+
+  for entry in $(cat "$MANIFEST"); do
+    # add seperator if not an empty string
+    [[ -n $keys ]] && keys="${keys}"$'\n'
+    keys="${keys}${prefix}$(manifest_entry_key "$entry")"
+  done
+
+  echo "$keys"
 }
 
 symlink() {
