@@ -1,2 +1,1 @@
 link:tmp/map.html
-link:.vim-x

@@ -1,8 +1,0 @@
-{
-  "coc.preferences.enableLinkedEditing": true,
-  "colors.enable": true,
-  "codeLens.enable": false,
-  "java.import.gradle.java.home": "/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
-  "inlayHint.enable": false
-}
