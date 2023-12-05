@@ -1,0 +1,55 @@
+# Path to dotfiles
+export DOTFILES_DIR="$HOME/.dotfiles"
+
+alias lsa="ls -1a"
+alias nd="mkdir"
+alias nf="touch"
+alias fd="rm -rf"
+alias dotfiles="$DOTFILES_DIR/main.sh"  
+
+# install vim plugins as submodule
+function vimadd() {
+  # ensure argument exists
+  if [ "$#" -eq 0 ]; then
+    echo "[ERROR] no plugin specified"
+    echo "Usage: "
+    echo "  vimadd [-opt] <plugin>"
+    return
+  fi
+
+  vimconfig_dir="$DOTFILES_DIR/refs/.vim-x"
+
+  # ensure .vim is already linked
+  if [[ ! -d "$vimconfig_dir" ]]; then
+    echo "[ERROR] Seems vim is not linked into dotfiles yet"
+    return
+  fi
+
+  # check for the optional flag
+  dir="start"
+  if [ "$1" = "-opt" ]; then
+    dir="opt"; shift
+  fi
+
+  # go into plugins directory inside dotfiles dir
+  cached_dir=$(pwd)
+
+  cd "${vimconfig_dir}/pack/vendor/${dir}"
+
+  while [ "$#" -gt "0" ]; do
+    plugin="$1"
+
+    if [[ ! $plugin =~ "https" ]]; then
+      plugin="https://github.com/${plugin}"
+    fi
+
+    # run git submodule 
+    git submodule add "$plugin" || { echo "[ERROR] '$1' installation failed. Skipping..."; }
+
+    # move to next arg
+    shift
+  done
+
+  cd "$cached_dir"
+}
+
