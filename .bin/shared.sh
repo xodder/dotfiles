@@ -96,7 +96,7 @@ manifest_entry_operation() {
 }
 
 manifest_entry_remove() {
-  sed -i '' "\#$1#d" "$MANIFEST"
+  sed -i "\#$1#d" "$MANIFEST"
 }
 
 manifest_entry_insert() {

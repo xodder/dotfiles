@@ -17,7 +17,7 @@ function vimadd() {
     return
   fi
 
-  vimconfig_dir="$DOTFILES_DIR/refs/.vim-x"
+  vimconfig_dir="$DOTFILES_DIR/refs/.vim"
 
   # ensure .vim is already linked
   if [[ ! -d "$vimconfig_dir" ]]; then
@@ -33,8 +33,12 @@ function vimadd() {
 
   # go into plugins directory inside dotfiles dir
   cached_dir=$(pwd)
+  
+  plugins_dir="${vimconfig_dir}/pack/vendor/${dir}"
+  
+  mkdir -p "${plugins_dir}"
 
-  cd "${vimconfig_dir}/pack/vendor/${dir}"
+  cd "${plugins_dir}"
 
   while [ "$#" -gt "0" ]; do
     plugin="$1"

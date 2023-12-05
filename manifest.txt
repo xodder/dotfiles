@@ -1,1 +1,2 @@
 link:.zshrc-addons
+link:.vim

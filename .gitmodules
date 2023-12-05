@@ -1,3 +1,90 @@
 [submodule "refs/.vim-x/pack/vendor/start/vim-surround"]
 	path = refs/.vim-x/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "refs/.vim/pack/vendor/start/ack.vim"]
+	path = refs/.vim/pack/vendor/start/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "refs/.vim/pack/vendor/start/bufexplorer"]
+	path = refs/.vim/pack/vendor/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer
+[submodule "refs/.vim/pack/vendor/start/coc.nvim"]
+	path = refs/.vim/pack/vendor/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule "refs/.vim/pack/vendor/start/comfortable-motion.vim"]
+	path = refs/.vim/pack/vendor/start/comfortable-motion.vim
+	url = https://github.com/yuttie/comfortable-motion.vim
+[submodule "refs/.vim/pack/vendor/start/ctrlp.vim"]
+	path = refs/.vim/pack/vendor/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "refs/.vim/pack/vendor/start/delimitMate"]
+	path = refs/.vim/pack/vendor/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+[submodule "refs/.vim/pack/vendor/start/fern.vim"]
+	path = refs/.vim/pack/vendor/start/fern.vim
+	url = https://github.com/lambdalisue/fern.vim
+[submodule "refs/.vim/pack/vendor/start/glyph-palette.vim"]
+	path = refs/.vim/pack/vendor/start/glyph-palette.vim
+	url = https://github.com/lambdalisue/glyph-palette.vim
+[submodule "refs/.vim/pack/vendor/start/minimalist"]
+	path = refs/.vim/pack/vendor/start/minimalist
+	url = https://github.com/dikiaap/minimalist
+[submodule "refs/.vim/pack/vendor/start/nerdfont.vim"]
+	path = refs/.vim/pack/vendor/start/nerdfont.vim
+	url = https://github.com/lambdalisue/nerdfont.vim
+[submodule "refs/.vim/pack/vendor/start/sparkup"]
+	path = refs/.vim/pack/vendor/start/sparkup
+	url = https://github.com/rstacruz/sparkup
+[submodule "refs/.vim/pack/vendor/start/tagalong.vim"]
+	path = refs/.vim/pack/vendor/start/tagalong.vim
+	url = https://github.com/AndrewRadev/tagalong.vim
+[submodule "refs/.vim/pack/vendor/start/vim-airline"]
+	path = refs/.vim/pack/vendor/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "refs/.vim/pack/vendor/start/vim-airline-themes"]
+	path = refs/.vim/pack/vendor/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "refs/.vim/pack/vendor/start/vim-closetag"]
+	path = refs/.vim/pack/vendor/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag
+[submodule "refs/.vim/pack/vendor/start/vim-exchange"]
+	path = refs/.vim/pack/vendor/start/vim-exchange
+	url = https://github.com/tommcdo/vim-exchange
+[submodule "refs/.vim/pack/vendor/start/vim-gitgutter"]
+	path = refs/.vim/pack/vendor/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "refs/.vim/pack/vendor/start/vim-matchup"]
+	path = refs/.vim/pack/vendor/start/vim-matchup
+	url = https://github.com/andymass/vim-matchup
+[submodule "refs/.vim/pack/vendor/start/vim-material"]
+	path = refs/.vim/pack/vendor/start/vim-material
+	url = https://github.com/hzchirs/vim-material
+[submodule "refs/.vim/pack/vendor/start/vim-moonfly-colors"]
+	path = refs/.vim/pack/vendor/start/vim-moonfly-colors
+	url = https://github.com/bluz71/vim-moonfly-colors
+[submodule "refs/.vim/pack/vendor/start/vim-polyglot"]
+	path = refs/.vim/pack/vendor/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "refs/.vim/pack/vendor/start/vim-abolish"]
+	path = refs/.vim/pack/vendor/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "refs/.vim/pack/vendor/start/vim-commentary"]
+	path = refs/.vim/pack/vendor/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "refs/.vim/pack/vendor/start/vim-fugitive"]
+	path = refs/.vim/pack/vendor/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "refs/.vim/pack/vendor/start/vim-surround"]
+	path = refs/.vim/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "refs/.vim/pack/vendor/start/vim-unimpaired"]
+	path = refs/.vim/pack/vendor/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "refs/.vim/pack/vendor/start/fern-renderer-nerdfont.vim"]
+	path = refs/.vim/pack/vendor/start/fern-renderer-nerdfont.vim
+	url = https://github.com/lambdalisue/fern-renderer-nerdfont.vim
+[submodule "refs/.vim/pack/vendor/opt/typescript-vim"]
+	path = refs/.vim/pack/vendor/opt/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+[submodule "refs/.vim/pack/vendor/opt/vim-jsx-pretty"]
+	path = refs/.vim/pack/vendor/opt/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
