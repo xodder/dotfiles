@@ -1,0 +1,1 @@
+ZoomWin.vba: call delete('/Users/xtrapel/.vim/plugin/ZoomWinPlugin.vim')|call delete('/Users/xtrapel/.vim/doc/ZoomWin.txt')|call delete('/Users/xtrapel/.vim/autoload/ZoomWin.vim')

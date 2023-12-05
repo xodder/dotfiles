@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/xtrapel/Workspace/projects/edrt'
+let g:netrw_dirhist_9='/Users/xtrapel/Workspace/projects/edrt/src/main'
+let g:netrw_dirhist_8='/Users/xtrapel/Workspace/projects/edrt/src'
+let g:netrw_dirhist_7='/Users/xtrapel/Workspace/projects/edrt'
+let g:netrw_dirhist_6='/Users/xtrapel/.vim/pack/vendor/start/vim-exchange/doc'
+let g:netrw_dirhist_5='/Users/xtrapel/Workspace/projects/_explorables/aeon'
+let g:netrw_dirhist_4='/Users/xtrapel/Workspace/projects/_explorables/aeon/src/main'
+let g:netrw_dirhist_3='/Users/xtrapel/Workspace/projects/_explorables/aeon/src/app'
+let g:netrw_dirhist_2='/Users/xtrapel/Workspace/projects/_explorables/aeon'
+let g:netrw_dirhist_1='/Users/xtrapel/Workspace/projects/_explorables/aeon/src/main'
