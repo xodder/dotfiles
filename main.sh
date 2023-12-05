@@ -31,7 +31,7 @@ main() {
 
 usage() {
   echo "usage: dotfiles <command> [<args>]" 
-  echo "   <command>: install, add, rm, sync"
+  echo "   <command>: install, add, rm, sync, status"
 }
 
 main $@

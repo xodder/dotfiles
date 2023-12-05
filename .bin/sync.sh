@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cached_dir=$(pwd)
+
+cd "$SCRIPT_DIR"
+
 # pull current state from upstream
 git pull
 
@@ -14,3 +18,4 @@ git add .
 git commit -m "$message"
 git push
 
+cd "$cached_dir"
