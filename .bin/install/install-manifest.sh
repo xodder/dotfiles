@@ -44,7 +44,10 @@ done
 
 # update git submodules
 echo "[INFO] Updating git submodules"
+cached_dir=$(pwd)
+cd "$SCRIPT_DIR"
 git submodule update --init --recursive --depth=1
+cd "$cached_dir"
 
 echo "[INFO] Done"
 
