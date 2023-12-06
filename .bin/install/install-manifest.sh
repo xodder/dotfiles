@@ -42,5 +42,9 @@ for entry in $(cat $MANIFEST); do
   esac
 done
 
+# update git submodules
+echo "[INFO] Updating git submodules"
+git submodule update --init --recursive --depth=1
+
 echo "[INFO] Done"
 
