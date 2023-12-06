@@ -48,7 +48,7 @@ function vimadd() {
     fi
 
     # run git submodule 
-    git submodule add "$plugin" || { echo "[ERROR] '$1' installation failed. Skipping..."; }
+    git submodule add --depth 1 "$plugin" || { echo "[ERROR] '$1' installation failed. Skipping..."; }
 
     # move to next arg
     shift
