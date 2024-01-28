@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.dotfiles
+cd /private/var/folders/n_/ctnj8pp53mqbwqq0_xq1l_n80000gp/T/62c8720adcf2dee00b02a0c471c76dac
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,13 +13,10 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +27 .bin/install.sh
-badd +1 .bin/install/install-manifest.sh
-badd +3 setup.sh
-badd +0 .git/config
+badd +43 index.d.ts
 argglobal
 %argdel
-edit .git/config
+edit index.d.ts
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -40,8 +37,7 @@ exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 argglobal
 enew
-file fern://drawer:1/file:///Users/xtrapel/.dotfiles;\$
-balt .bin/install/install-manifest.sh
+file fern://drawer:1/file:///private/var/folders/n_/ctnj8pp53mqbwqq0_xq1l_n80000gp/T/62c8720adcf2dee00b02a0c471c76dac;\$
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -52,7 +48,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt setup.sh
+balt index.d.ts
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -61,13 +57,18 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 9 - ((8 * winheight(0) + 23) / 47)
+31
+normal! zo
+69
+normal! zo
+let s:l = 43 - ((37 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9
-normal! 042|
+keepjumps 43
+normal! 028|
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 tabnext 1
@@ -85,7 +86,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

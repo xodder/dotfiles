@@ -34,7 +34,7 @@ badd +26 classes/class.Transfers.php
 badd +1 classes/class.Secure.php
 badd +1017 views/js/actions.js
 badd +1 views/js/actions\ (2:15:21,\ 1:42\ PM).js
-badd +1184 src/util.php
+badd +1464 src/util.php
 badd +3137 views/js/jquery.flot.js
 badd +1 views/js/xlsx.js
 badd +1 views/bootstrap-4.3.1-dist/css/bootstrap-reboot.css.map
@@ -58,22 +58,22 @@ badd +19 views/data/salary-assignment.tmpl
 badd +1 src/exls.php
 badd +1 crons/crons.loan-reminder.php
 badd +31 crons/crons.load-statement-disbursement.php
-badd +0 health://
+badd +1 health://
+badd +1 ~/Workspace/fundquest/business-reporting/classes/class.AESEncrypt.php
+badd +62 x.html
+badd +22 b.html
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit crons/crons.loan-reminder.php
+edit src/util.php
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -85,8 +85,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 86 + 102) / 204)
-exe 'vert 3resize ' . ((&columns * 86 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 argglobal
 enew
 file fern://drawer:1/file:///Users/xtrapel/Workspace/fundquest/business-reporting;\$
@@ -101,7 +100,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt classes/class.FinConnect.php
+balt crons/crons.loan-reminder.php
 setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -110,60 +109,20 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 59 - ((33 * winheight(0) + 23) / 47)
+let s:l = 1435 - ((14 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 59
-normal! 027|
-wincmd w
-argglobal
-if bufexists(fnamemodify("crons/crons.loan-reminder.php", ":p")) | buffer crons/crons.loan-reminder.php | else | edit crons/crons.loan-reminder.php | endif
-if &buftype ==# 'terminal'
-  silent file crons/crons.loan-reminder.php
-endif
-balt classes/class.FinConnect.php
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 05|
+keepjumps 1435
+normal! 04|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 86 + 102) / 204)
-exe 'vert 3resize ' . ((&columns * 86 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 tabnext
-edit src/util.php
+edit b.html
 argglobal
-balt src/investmentcerts.php
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1184 - ((14 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1184
-normal! 014|
-tabnext
-edit src/util.php
-argglobal
-balt classes/class.FinConnect.php
-setlocal fdm=syntax
+balt src/util.php
+setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -177,7 +136,24 @@ keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-tabnext 2
+tabnext
+edit x.html
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
