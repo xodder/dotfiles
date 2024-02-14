@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-repo="git@github.com:xodder/dotfiles.git"
+repo="https://github.com/xodder/dotfiles.git"
 destination="$HOME/.dotfiles"
 
 cd "$HOME"

@@ -526,3 +526,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " match-up
 let g:matchup_matchparen_offscreen = {'method': 'popup'}
+
+" vim-notes
+let g:notes_directories = ['~/Documents/Notes']

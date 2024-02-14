@@ -89,3 +89,9 @@
 [submodule "refs/.vim/pack/vendor/opt/vim-jsx-pretty"]
 	path = refs/.vim/pack/vendor/opt/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule "refs/.vim/pack/vendor/start/vim-notes"]
+	path = refs/.vim/pack/vendor/start/vim-notes
+	url = https://github.com/xolox/vim-notes
+[submodule "refs/.vim/pack/vendor/start/vim-misc"]
+	path = refs/.vim/pack/vendor/start/vim-misc
+	url = https://github.com/xolox/vim-misc
