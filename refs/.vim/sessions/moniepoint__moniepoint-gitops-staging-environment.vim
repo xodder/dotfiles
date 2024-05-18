@@ -13,12 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +61 moniepoint-frontoffice-ui-v2/configmap.yml
+badd +67 moniepoint-frontoffice-ui-v2/configmap.yml
 badd +1 moniepoint-frontoffice-ui-v2/service.yml
-badd +43 moniepoint-frontoffice-ui-v2/deployment.yml
+badd +1 moniepoint-frontoffice-ui-v2/deployment.yml
 argglobal
 %argdel
-edit moniepoint-frontoffice-ui-v2/deployment.yml
+edit moniepoint-frontoffice-ui-v2/configmap.yml
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -35,11 +35,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/Workspace/moniepoint/moniepoint-gitops-staging-environment;\$
+balt moniepoint-frontoffice-ui-v2/deployment.yml
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -50,7 +51,6 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt moniepoint-frontoffice-ui-v2/service.yml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -59,18 +59,16 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-4
-normal! zo
-let s:l = 43 - ((42 * winheight(0) + 26) / 52)
+let s:l = 55 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 43
-normal! 03|
+keepjumps 55
+normal! 048|
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

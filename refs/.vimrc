@@ -339,6 +339,8 @@ function! s:init_fern() abort
   nmap <buffer><nowait> z <Plug>(fern-action-zoom)
   nmap <buffer><nowait> h <Plug>(fern-action-collapse)
 
+  nmap <buffer> <c-f> <Plug>(fern-action-rgsearch)
+
   " let g:fern#mark_symbol                       = '●'
   " let g:fern#renderer#default#collapsed_symbol = '▷ '
   " let g:fern#renderer#default#expanded_symbol  = '▼ '
@@ -450,6 +452,8 @@ nmap <leader>caf  <Plug>(coc-codeaction)
 
 " open codeaction for selected range in visual mode
 xmap gCa          <Plug>(coc-codeaction-selected)
+xmap <leader>as  <Plug>(coc-codeaction-selected)
+nmap <leader>as  <Plug>(coc-codeaction-selected)
 
 " Apply the most preferred quickfix action to fix diagnostic on the current line
 nmap <leader>qf  <Plug>(coc-fix-current)

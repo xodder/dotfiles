@@ -13,7 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 src/pages/login/variations/ng-login/ng-login.tsx
+badd +26 src/pages/login/variations/ng-login/ng-login.tsx
 badd +1 src/index.tsx
 badd +5 postcss.config.js
 badd +1 src/App.scss
@@ -68,8 +68,8 @@ badd +6 src/components/button/button.tsx
 badd +1 src/components/icon/icon.scss
 badd +18 src/pages/shared/blocking-activity-indicator/blocking-activity-indicator.tsx
 badd +29 src/components/textfield/textfield.scss
-badd +4 src/pages/device-registration/variations/ng-device-registration/helpers/use-ng-init-device-registration.ts
-badd +31 src/pages/device-registration/variations/ng-device-registration/helpers/use-ng-device-registration-stage.ts
+badd +1 src/pages/device-registration/variations/ng-device-registration/helpers/use-ng-init-device-registration.ts
+badd +1 src/pages/device-registration/variations/ng-device-registration/helpers/use-ng-device-registration-stage.ts
 badd +46 src/pages/device-registration/variations/ke-device-registration/helpers/use-ke-device-registration-stage.ts
 badd +24 src/pages/device-registration/variations/ke-device-registration/helpers/use-ke-init-device-registration.ts
 badd +40 src/components/backdrop/backdrop.tsx
@@ -105,7 +105,7 @@ badd +220 node_modules/.pnpm/i18next@23.4.4/node_modules/i18next/typescript/t.d.
 badd +1 node_modules/.pnpm/i18next@23.4.4/node_modules/i18next/index.js
 badd +161 node_modules/.pnpm/i18next@23.4.4/node_modules/i18next/i18next.js
 badd +3 src/utils/use-lazy-ref.ts
-badd +39 src/helpers/modal-ish.tsx
+badd +1 src/helpers/modal-ish.tsx
 badd +164 node_modules/.pnpm/i18next@23.4.4/node_modules/i18next/dist/cjs/i18next.js
 badd +1 src/components/box/box.types.ts
 badd +1 src/components/box/box.tsx
@@ -158,7 +158,7 @@ badd +6 src/components/backdrop/backdrop.types.ts
 badd +1 src/components/backdrop/backdrop.scss
 badd +1195 ~/.config/coc/extensions/node_modules/coc-tsserver/node_modules/typescript/lib/lib.es5.d.ts
 badd +67 src/pages/shared/app-bar/app-bar.tsx
-badd +104 src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
+badd +91 src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
 badd +1 src/pages/password-recovery/variations/shared/password-strength-box.tsx
 badd +104 src/pages/password-recovery/variations/ke-password-recovery/components/otp-verification-form.tsx
 badd +104 src/pages/password-recovery/variations/ng-password-recovery/ng-password-recovery.tsx
@@ -188,12 +188,15 @@ badd +3 public/locales/de.json
 badd +12 src/helpers/internalization/root-i18n-instance.ts
 badd +26 src/helpers/internalization/backend.ts
 badd +1 src/api/helpers/auth/device-registration/use-ke-send-otp.ts
+badd +1 src/routes/index.tsx
+badd +1 dist/assets/auth.js
+badd +1 src/components/page/page.scss
 argglobal
 %argdel
 $argadd src/pages/shared/inner-content-box/index.ts
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit src/helpers/modal-ish.tsx
+edit src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -226,7 +229,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt src/pages/login/variations/ke-login/ke-login.tsx
+balt src/components/page/page.scss
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -235,14 +238,25 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 26) / 52)
+46
+normal! zo
+55
+normal! zo
+56
+normal! zo
+57
+normal! zo
+63
+normal! zo
+65
+normal! zo
+let s:l = 65 - ((22 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 65
 normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
 tabnext

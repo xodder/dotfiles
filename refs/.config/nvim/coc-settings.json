@@ -1,5 +1,13 @@
 {
   "inlayHint.enable": false,
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["kamonaTv\\(\\{([^;]*);", "'([^']*)'"],
+    ["kamonaTv\\(\\{([^;]*);", "\"([^\"]*)\""],
+    ["kamonaTv\\(\\{([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
   "languageserver": {
     // "ccls": {
     //   "command": "ccls",

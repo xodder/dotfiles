@@ -95,3 +95,9 @@
 [submodule "refs/.vim/pack/vendor/start/vim-misc"]
 	path = refs/.vim/pack/vendor/start/vim-misc
 	url = https://github.com/xolox/vim-misc
+[submodule "refs/.vim/pack/vendor/start/fern-mapping-rgsearch.vim"]
+	path = refs/.vim/pack/vendor/start/fern-mapping-rgsearch.vim
+	url = https://github.com/borissov/fern-mapping-rgsearch.vim
+[submodule "refs/.vim/pack/vendor/start/coc-flutter"]
+	path = refs/.vim/pack/vendor/start/coc-flutter
+	url = https://github.com/iamcco/coc-flutter

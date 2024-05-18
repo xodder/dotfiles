@@ -32,7 +32,7 @@ badd +1 src/screen/use-is-mobile.ts
 badd +32 src/screen/use-media-query.ts
 badd +1 src/screen/use-memoized-value.ts
 badd +31 src/screen/use-sx.ts
-badd +11 src/shared/use-memoized-value.ts
+badd +1 src/shared/use-memoized-value.ts
 badd +1 src/screen/use-screen-dependent-value.ts
 badd +1 src/shared/index.ts
 badd +1 .husky/_/husky.sh
@@ -113,7 +113,6 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
 tabnext 2
