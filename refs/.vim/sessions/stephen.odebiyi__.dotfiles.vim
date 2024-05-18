@@ -18,20 +18,16 @@ badd +1 refs/.zshrc-addons
 badd +99 .bin/shared.sh
 badd +1 main.sh
 badd +1 LICENSE
-badd +1 fugitive:///Users/stephen.odebiyi/.dotfiles/.git//
+badd +0 ~/.dotfiles/.gitmodules
 argglobal
 %argdel
-edit LICENSE
+edit ~/.dotfiles/.gitmodules
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -42,11 +38,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe '2resize ' . ((&lines * 25 + 27) / 55)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
-exe '3resize ' . ((&lines * 26 + 27) / 55)
-exe 'vert 3resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/.dotfiles;\$
@@ -61,7 +54,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt main.sh
+balt LICENSE
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -70,39 +63,15 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 12) / 25)
+let s:l = 103 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 103
 normal! 0
 wincmd w
-argglobal
-if bufexists(fnamemodify("fugitive:///Users/stephen.odebiyi/.dotfiles/.git//", ":p")) | buffer fugitive:///Users/stephen.odebiyi/.dotfiles/.git// | else | edit fugitive:///Users/stephen.odebiyi/.dotfiles/.git// | endif
-if &buftype ==# 'terminal'
-  silent file fugitive:///Users/stephen.odebiyi/.dotfiles/.git//
-endif
-balt .bin/shared.sh
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr=<<<<<<<<,>>>>>>>>
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 13) / 26)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 02|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe '2resize ' . ((&lines * 25 + 27) / 55)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
-exe '3resize ' . ((&lines * 26 + 27) / 55)
-exe 'vert 3resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
