@@ -13,6 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+<<<<<<< HEAD
 badd +1 pnpm-workspace.yaml
 badd +0 term://~/Workspace/projects/chakra-ui//34149:/bin/zsh
 badd +17 package.json
@@ -33,6 +34,91 @@ tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
 edit packages/react/src/components/button/button.tsx
+=======
+badd +1 packages/react/__stories__/shared/color-palettes.tsx
+badd +1 term://~/Workspace/projects/chakra-ui//72619:/bin/zsh
+badd +1 packages/react/__stories__/shared/decorative-box.tsx
+badd +1 packages/react/__stories__/shared/playground-table.tsx
+badd +1 packages/react/__stories__/accordion.stories.tsx
+badd +253 packages/react/scripts/typedocs.ts
+badd +126 packages/react/src/anatomy/components.ts
+badd +101 packages/react/src/anatomy/create-anatomy.ts
+badd +206 packages/react/src/components/accordion/use-accordion-item.ts
+badd +12 packages/react/src/components/accordion/use-accordion.ts
+badd +1 packages/react/src/components/accordion/index.ts
+badd +32 packages/react/src/components/accordion/accordion-root.tsx
+badd +36 packages/react/src/components/accordion/accordion-item.tsx
+badd +39 packages/react/src/components/button/button.tsx
+badd +10 packages/react/src/styled-system/use-recipe.ts
+badd +525 packages/react/src/styled-system/generated/recipes.gen.ts
+badd +36 packages/react/src/styled-system/recipe.types.ts
+badd +1 packages/react/src/styled-system/recipe-props.tsx
+badd +38 packages/react/src/styled-system/css.types.ts
+badd +161 packages/react/src/styled-system/generated/system.gen.ts
+badd +81 packages/react/src/styled-system/types.ts
+badd +195 packages/react/src/styled-system/generated/conditions.gen.ts
+badd +1 packages/react/src/components/button/icon-button.tsx
+badd +51 packages/react/src/components/checkbox/checkbox-root.tsx
+badd +16 packages/react/src/components/checkbox/use-checkbox.ts
+badd +1 packages/react/src/components/checkbox/checkbox-types.ts
+badd +1 packages/react/src/components/center/center.tsx
+badd +1 packages/react/src/components/box/box.tsx
+badd +1 packages/react/src/components/box/circle.tsx
+badd +26 packages/react/src/components/aspect-ratio/aspect-ratio.tsx
+badd +39 packages/react/src/components/field/field-root.tsx
+badd +15 packages/react/src/components/field/field-props.ts
+badd +5 packages/utils/src/split-props.ts
+badd +79 packages/react/src/styled-system/system.ts
+badd +57 packages/react/src/styled-system/cva.ts
+badd +26 packages/utils/__tests__/lazy.test.ts
+badd +16 packages/react/src/styled-system/use-slot-recipe.ts
+badd +19 packages/react/src/styled-system/provider.tsx
+badd +27 packages/react/src/create-context.ts
+badd +87 packages/react/src/styled-system/factory.ts
+badd +1 packages/react/src/components/badge/badge.tsx
+badd +76 packages/react/src/components/group/group.tsx
+badd +110 packages/react/src/styled-system/composition.ts
+badd +19 packages/react/src/styled-system/is-valid-prop.ts
+badd +5 packages/react/src/styled-system/utility.ts
+badd +76 packages/react/src/styled-system/token-transforms.ts
+badd +101 packages/react/src/styled-system/token-middleware.ts
+badd +451 packages/react/src/styled-system/token-dictionary.ts
+badd +2 packages/react/src/styled-system/factory.types.ts
+badd +24 packages/utils/src/types.ts
+badd +25 packages/react/src/components/accordion/accordion-props.ts
+badd +7 packages/utils/src/create-props.ts
+badd +51 packages/react/src/styled-system/unit-conversion.ts
+badd +1 packages/react/src/styled-system/use-token.ts
+badd +101 packages/react/src/styled-system/breakpoints.ts
+badd +1 packages/react/src/styled-system/color-mix.ts
+badd +135 packages/react/src/styled-system/preflight.ts
+badd +821 packages/react/src/styled-system/generated/token.gen.ts
+badd +35 packages/react/scripts/extract-recipe-props.ts
+badd +1 packages/react/package.json
+badd +1 packages/react/tsconfig.json
+badd +1 packages/react/tsconfig.build.json
+badd +250 packages/react/__tests__/accordion.test.tsx
+badd +8 packages/react/__tests__/checkbox.test.tsx
+badd +1 packages/react/src/components/checkbox/index.ts
+badd +1 packages/react/src/components/checkbox/checkbox-control.tsx
+badd +114 packages/react/src/components/focus-lock/focus-lock.tsx
+badd +1 packages/react/src/components/icon/create-icon.tsx
+badd +27 packages/react/src/components/icon/icon.tsx
+badd +26 packages/react/src/components/input/input.tsx
+badd +14 packages/react/src/components/input/input-element.tsx
+badd +1 packages/react/src/components/alert/index.ts
+badd +40 packages/react/src/components/alert/alert-root.tsx
+badd +1 packages/react/src/components/alert/alert-title.tsx
+badd +1 packages/react/src/components/alert/alert-context.ts
+badd +18 packages/react/src/components/alert/alert-icons.tsx
+badd +12 packages/react/src/theme/recipes/icon.ts
+badd +0 packages/react/src/theme/recipes/input-addon.ts
+argglobal
+%argdel
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit packages/react/src/components/icon/icon.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -42,10 +128,13 @@ wincmd _ | wincmd |
 vsplit
 2wincmd h
 wincmd w
+<<<<<<< HEAD
 wincmd _ | wincmd |
 split
 1wincmd k
 wincmd w
+=======
+>>>>>>> 8ea130e (Update dotfiles)
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -56,6 +145,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+<<<<<<< HEAD
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe '2resize ' . ((&lines * 25 + 27) / 55)
 exe 'vert 2resize ' . ((&columns * 77 + 93) / 187)
@@ -65,6 +155,15 @@ exe 'vert 4resize ' . ((&columns * 78 + 93) / 187)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/Workspace/projects/chakra-ui;\$
+=======
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 73 + 89) / 178)
+exe 'vert 3resize ' . ((&columns * 73 + 89) / 178)
+argglobal
+enew
+file fern://drawer:1/file:///Users/xtrapel/Workspace/projects/chakra-ui;\$
+balt packages/react/src/components/accordion/accordion-item.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -75,7 +174,11 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
+<<<<<<< HEAD
 balt packages/react/src/theme/recipes/button.ts
+=======
+balt packages/react/src/theme/recipes/icon.ts
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -84,6 +187,7 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+<<<<<<< HEAD
 23
 normal! zo
 35
@@ -103,6 +207,21 @@ if &buftype ==# 'terminal'
   silent file packages/react/src/theme/recipes/button.ts
 endif
 balt packages/react/src/components/button/button.tsx
+=======
+let s:l = 27 - ((26 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 27
+normal! 012|
+wincmd w
+argglobal
+if bufexists(fnamemodify("packages/react/src/components/checkbox/checkbox-control.tsx", ":p")) | buffer packages/react/src/components/checkbox/checkbox-control.tsx | else | edit packages/react/src/components/checkbox/checkbox-control.tsx | endif
+if &buftype ==# 'terminal'
+  silent file packages/react/src/components/checkbox/checkbox-control.tsx
+endif
+balt packages/react/__tests__/checkbox.test.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -111,6 +230,7 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+<<<<<<< HEAD
 4
 normal! zo
 34
@@ -202,6 +322,26 @@ if bufexists(fnamemodify("term://~/Workspace/projects/chakra-ui//34149:/bin/zsh"
 if &buftype ==# 'terminal'
   silent file term://~/Workspace/projects/chakra-ui//34149:/bin/zsh
 endif
+=======
+let s:l = 20 - ((19 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 20
+normal! 012|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 73 + 89) / 178)
+exe 'vert 3resize ' . ((&columns * 73 + 89) / 178)
+tabnext
+argglobal
+if bufexists(fnamemodify("term://~/Workspace/projects/chakra-ui//72619:/bin/zsh", ":p")) | buffer term://~/Workspace/projects/chakra-ui//72619:/bin/zsh | else | edit term://~/Workspace/projects/chakra-ui//72619:/bin/zsh | endif
+if &buftype ==# 'terminal'
+  silent file term://~/Workspace/projects/chakra-ui//72619:/bin/zsh
+endif
+balt packages/react/__stories__/shared/color-palettes.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -210,11 +350,19 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+<<<<<<< HEAD
 let s:l = 2 - ((1 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 2
+=======
+let s:l = 11 - ((10 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 11
+>>>>>>> 8ea130e (Update dotfiles)
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

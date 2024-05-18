@@ -14,7 +14,7 @@ else
   set shortmess=aoO
 endif
 badd +198 src/main/java/com/secondcaesar/T24Connect.java
-badd +910 src/main/java/com/secondcaesar/FundQuestService.java
+badd +1 src/main/java/com/secondcaesar/FundQuestService.java
 badd +1 src/main/java/com/secondcaesar/InvestmentProduct.java
 badd +26 src/main/java/com/secondcaesar/SendEmail.java
 badd +146 src/main/java/com/secondcaesar/LoanService.java
@@ -43,7 +43,7 @@ badd +10 src/main/java/com/secondcaesar/OTPWorker.java
 badd +101 src/main/java/com/secondcaesar/Vas2Net.java
 badd +11 src/main/java/com/secondcaesar/SessionManager.java
 badd +3 src/main/java/com/secondcaesar/JAXRSConfiguration.java
-badd +22 src/main/java/com/secondcaesar/Constants.java
+badd +47 src/main/java/com/secondcaesar/Constants.java
 badd +1 src/main/java/com/secondcaesar/TransactionLogRequest.java
 badd +8 src/main/java/com/secondcaesar/TransactionLogRecord.java
 badd +32 src/main/java/com/secondcaesar/Main.java
@@ -106,7 +106,7 @@ argglobal
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit src/main/java/com/secondcaesar/FundQuestService.java
+edit src/main/resources/hibernate.cfg.xml
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -139,7 +139,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt src/main/java/com/secondcaesar/T24Connect.java
+balt src/main/resources/META-INF/persistence.xml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -148,186 +148,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-45
+4
 normal! zo
-236
-normal! zo
-246
-normal! zo
-254
-normal! zo
-270
-normal! zo
-293
-normal! zo
-295
-normal! zo
-320
-normal! zo
-323
-normal! zo
-387
-normal! zo
-390
-normal! zo
-394
-normal! zo
-396
-normal! zo
-397
-normal! zo
-414
-normal! zo
-420
-normal! zo
-424
-normal! zo
-426
-normal! zo
-427
-normal! zo
-429
-normal! zo
-431
-normal! zo
-433
-normal! zo
-435
-normal! zo
-436
-normal! zo
-439
-normal! zo
-441
-normal! zo
-445
-normal! zo
-448
-normal! zo
-451
-normal! zo
-455
-normal! zo
-458
-normal! zo
-461
-normal! zo
-462
-normal! zo
-465
-normal! zo
-468
-normal! zo
-469
-normal! zo
-472
-normal! zo
-476
-normal! zo
-479
-normal! zo
-484
-normal! zo
-487
-normal! zo
-508
-normal! zo
-509
-normal! zo
-511
-normal! zo
-606
-normal! zo
-607
-normal! zo
-642
-normal! zo
-644
-normal! zo
-669
-normal! zo
-670
-normal! zo
-678
-normal! zo
-694
-normal! zo
-695
-normal! zo
-718
-normal! zo
-720
-normal! zo
-763
-normal! zo
-764
-normal! zo
-847
-normal! zo
-848
-normal! zo
-849
-normal! zo
-859
-normal! zo
-865
-normal! zo
-916
-normal! zo
-917
-normal! zo
-949
-normal! zo
-950
-normal! zo
-1264
-normal! zo
-1265
-normal! zo
-1266
-normal! zo
-1298
-normal! zo
-1299
-normal! zo
-1300
-normal! zo
-1331
-normal! zo
-1332
-normal! zo
-1333
-normal! zo
-1365
-normal! zo
-1367
-normal! zo
-1368
-normal! zo
-1611
-normal! zo
-1888
-normal! zo
-1889
-normal! zo
-1946
-normal! zo
-1947
-normal! zo
-1948
-normal! zo
-1963
-normal! zo
-1964
-normal! zo
-1965
-normal! zo
-let s:l = 1073 - ((45 * winheight(0) + 23) / 47)
+let s:l = 8 - ((7 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1073
-normal! 045|
+keepjumps 8
+normal! 052|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
@@ -365,11 +193,11 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 10047 - ((46 * winheight(0) + 23) / 47)
+let s:l = 47 - ((46 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10047
+keepjumps 47
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -384,6 +212,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

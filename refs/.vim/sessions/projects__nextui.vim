@@ -13,6 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+<<<<<<< HEAD
 badd +1 turbo.json
 badd +1 term://~/Workspace/projects/nextui//29427:/bin/zsh
 badd +1 packages/storybook/package.json
@@ -124,15 +125,50 @@ argglobal
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
 edit packages/core/system-rsc/src/types.ts
+=======
+badd +1 packages/core/react/src/scripts/postbuild.js
+badd +1 packages/core/react/src/scripts/prebuild.js
+badd +47 packages/core/react/src/index.ts
+badd +1 turbo.json
+badd +51 packages/core/react/package.json
+badd +101 packages/core/system-rsc/src/extend-variants.js
+badd +76 packages/core/system-rsc/src/utils.ts
+badd +115 packages/core/theme/stories/colors.stories.tsx
+badd +4 packages/components/accordion/src/accordion.tsx
+badd +212 packages/components/accordion/src/use-accordion.ts
+badd +54 packages/components/accordion/package.json
+badd +51 packages/components/accordion/src/accordion-item.tsx
+badd +24 packages/components/button/src/button.tsx
+badd +2 packages/components/button/src/use-button.ts
+badd +1 packages/core/system/package.json
+badd +1 packages/core/theme/package.json
+badd +1 packages/core/system-rsc/package.json
+badd +26 packages/storybook/package.json
+badd +1 packages/storybook/public/site.webmanifest
+badd +181 packages/utilities/react-rsc-utils/src/dom-props.ts
+badd +1 packages/utilities/react-rsc-utils/src/children.ts
+badd +1 packages/utilities/react-rsc-utils/src/functions.ts
+badd +1 packages/core/system-rsc/test-utils/extend-components.tsx
+badd +51 packages/core/system-rsc/test-utils/no-slots-component.tsx
+badd +1 packages/core/system-rsc/test-utils/slots-component.tsx
+badd +0 packages/core/system/src/provider.tsx
+argglobal
+%argdel
+edit packages/core/system/src/provider.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
+<<<<<<< HEAD
 wincmd _ | wincmd |
 vsplit
 2wincmd h
 wincmd w
+=======
+1wincmd h
+>>>>>>> 8ea130e (Update dotfiles)
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -143,6 +179,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+<<<<<<< HEAD
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 77 + 93) / 187)
 exe 'vert 3resize ' . ((&columns * 78 + 93) / 187)
@@ -150,6 +187,13 @@ argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/Workspace/projects/nextui;\$
 balt packages/core/theme/src/animations/index.ts
+=======
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 147 + 89) / 178)
+argglobal
+enew
+file fern://drawer:1/file:///Users/xtrapel/Workspace/projects/nextui;\$
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -160,7 +204,11 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
+<<<<<<< HEAD
 balt packages/core/system-rsc/src/utils.ts
+=======
+balt packages/core/system-rsc/test-utils/slots-component.tsx
+>>>>>>> 8ea130e (Update dotfiles)
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -169,6 +217,7 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+<<<<<<< HEAD
 48
 normal! zo
 let s:l = 24 - ((0 * winheight(0) + 26) / 52)
@@ -265,6 +314,18 @@ keepjumps exe s:l
 normal! zt
 keepjumps 4
 normal! 0
+=======
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 147 + 89) / 178)
+>>>>>>> 8ea130e (Update dotfiles)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -272,13 +333,21 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+<<<<<<< HEAD
+=======
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+>>>>>>> 8ea130e (Update dotfiles)
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+<<<<<<< HEAD
 nohlsearch
+=======
+>>>>>>> 8ea130e (Update dotfiles)
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

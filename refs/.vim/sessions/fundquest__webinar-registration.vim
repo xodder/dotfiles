@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/Workspace/fundquest/business-reporting
+cd ~/Workspace/fundquest/webinar-registration
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,62 +13,28 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 index.php
-badd +51 views/index.php
-badd +1 src/validate.Authenticate.php
-badd +11 classes/class.Authenticate.php
-badd +110 views/main.php
-badd +28 src/include.all.php
-badd +70 classes/class.User.php
-badd +556 classes/class.FormGenerator.php
-badd +17 classes/class.Role.php
-badd +1 classes/class.Menu.php
-badd +1 views/js/main_min.js
-badd +191 classes/class.Applications.php
-badd +1 classes/class.FundsMovement.php
-badd +14 crons/crons.mails.php
-badd +26 crons/crons.txn.intbank.php
-badd +1 classes/class.Customers.php
-badd +1 classes/class.nusoap_parser.php
-badd +26 classes/class.Transfers.php
-badd +1 classes/class.Secure.php
-badd +1017 views/js/actions.js
-badd +1 views/js/actions\ (2:15:21,\ 1:42\ PM).js
-badd +1435 src/util.php
-badd +3137 views/js/jquery.flot.js
-badd +1 views/js/xlsx.js
-badd +1 views/bootstrap-4.3.1-dist/css/bootstrap-reboot.css.map
-badd +6 views/bootstrap-4.3.1-dist/js/bootstrap.min.js
-badd +1 views/css/main.css
-badd +3 .gitignore
-badd +1 classes/class.SimpleRest.php
-badd +28 src/genPDF.php
-badd +1 export_files/1111987.txt
-badd +53 classes/class.dbConnect.php
-badd +217 src/investmentcerts.php
-badd +144 classes/class.FinConnect.php
-badd +59 classes/class.FinConnect_Test.php
-badd +19 webservices/loanCall.php
-badd +42 classes/class.Authorization.php
-badd +19 views/data/ddm-template.tmpl
-badd +1 views/data/lga-data.json
-badd +147 views/data/offer-template.tmpl
-badd +1 views/data/pcrs-agreement.tmpl
-badd +19 views/data/salary-assignment.tmpl
-badd +1 src/exls.php
-badd +1 crons/crons.loan-reminder.php
-badd +31 crons/crons.load-statement-disbursement.php
-badd +1 health://
-badd +1 ~/Workspace/fundquest/business-reporting/classes/class.AESEncrypt.php
-badd +62 x.html
-badd +22 b.html
-badd +49 crons/crons.sync.loans.php
+badd +5 src/App.tsx
+badd +1 term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh
+badd +14 src/index.tsx
+badd +1 ~/Workspace/fundquest/webinar-registration/src/WebinarRegistration.tsx
+badd +1 package.json
+badd +1 term://~/Workspace/fundquest/webinar-registration//33034:/bin/zsh
+badd +3 tailwind.config.js
+badd +4 src/index.css
+badd +120 node_modules/.pnpm/react-hook-form@7.50.0_react@18.2.0/node_modules/react-hook-form/dist/types/form.d.ts
+badd +1 src/pages/_app.tsx
+badd +44 src/pages/\[webinarId].tsx
+badd +28 src/pages/api/add-webinar-registrant/\[webinarId].ts
+badd +1 src/pages/_document.tsx
+badd +1 src/pages/index.tsx
+badd +1 .env.local
+badd +1 pnpm-lock.yaml
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit crons/crons.sync.loans.php
+edit package.json
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -89,8 +55,8 @@ exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 argglobal
 enew
-file fern://drawer:1/file:///Users/xtrapel/Workspace/fundquest/business-reporting;\$
-balt classes/class.FinConnect.php
+file fern://drawer:1/file:///Users/xtrapel/Workspace/fundquest/webinar-registration;\$
+balt src/App.tsx
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -101,34 +67,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt classes/class.dbConnect.php
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-16
-normal! zo
-45
-normal! zo
-70
-normal! zo
-let s:l = 49 - ((27 * winheight(0) + 23) / 47)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 49
-normal! 030|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
-tabnext
-edit b.html
-argglobal
-balt src/util.php
+balt pnpm-lock.yaml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -143,9 +82,15 @@ keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 tabnext
-edit x.html
 argglobal
+if bufexists(fnamemodify("term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh", ":p")) | buffer term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh | else | edit term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh | endif
+if &buftype ==# 'terminal'
+  silent file term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh
+endif
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -154,11 +99,32 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+let s:l = 51 - ((45 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 51
+normal! 0
+tabnext
+argglobal
+if bufexists(fnamemodify("term://~/Workspace/fundquest/webinar-registration//33034:/bin/zsh", ":p")) | buffer term://~/Workspace/fundquest/webinar-registration//33034:/bin/zsh | else | edit term://~/Workspace/fundquest/webinar-registration//33034:/bin/zsh | endif
+if &buftype ==# 'terminal'
+  silent file term://~/Workspace/fundquest/webinar-registration//33034:/bin/zsh
+endif
+balt term://~/Workspace/fundquest/webinar-registration//27842:/bin/zsh
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 47 - ((46 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 47
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -173,6 +139,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

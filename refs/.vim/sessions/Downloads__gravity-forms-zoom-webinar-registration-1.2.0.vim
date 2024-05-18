@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.dotfiles
+cd ~/Downloads/gravity-forms-zoom-webinar-registration-1.2.0
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,13 +13,23 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +27 .bin/install.sh
-badd +1 .bin/install/install-manifest.sh
-badd +3 setup.sh
-badd +9 .git/config
+badd +1 composer.json
+badd +76 phpcs.xml
+badd +378 vendor/phpcompatibility/php-compatibility/PHPCompatibility/Sniffs/Keywords/NewKeywordsSniff.php
+badd +26 vendor/composer/installed.php
+badd +156 vendor/composer/installed.json
+badd +0 readme.md
+badd +51 gravity-forms-zoom-webinar-registration.php
+badd +1 .editorconfig
+badd +24 vendor/autoload.php
+badd +14 languages/en_US.mo
+badd +1 includes/class-gravityzwr-wordpressremote.php
+badd +1 includes/class-gravityzwr-zoomapi.php
+badd +1 includes/class-gravityzwr.php
+badd +1 gravity-forms-zoom-registration-sample-form.json
 argglobal
 %argdel
-edit setup.sh
+edit readme.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -40,8 +50,7 @@ exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 argglobal
 enew
-file fern://drawer:1/file:///Users/xtrapel/.dotfiles;\$
-balt .bin/install/install-manifest.sh
+file fern://drawer:1/file:///Users/xtrapel/Downloads/gravity-forms-zoom-webinar-registration-1.2.0;\$
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -52,7 +61,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt .git/config
+balt phpcs.xml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -61,12 +70,12 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 3 - ((2 * winheight(0) + 23) / 47)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 044|
+keepjumps 1
+normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
@@ -85,7 +94,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

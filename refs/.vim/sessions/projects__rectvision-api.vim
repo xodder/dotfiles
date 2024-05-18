@@ -14,47 +14,24 @@ else
   set shortmess=aoO
 endif
 badd +1 .babelrc
-badd +1 src/utils/broadcaster/providers/default.ts
+badd +2 src/utils/broadcaster/providers/default.ts
 badd +1 src/utils/broadcaster/types/index.ts
 badd +1 src/utils/crash/index.ts
 badd +1 src/utils/password/index.ts
 badd +4 src/utils/token/index.ts
-badd +0 src/utils/to-bytes.ts
+badd +1 src/utils/to-bytes.ts
+badd +2 src/services/annotation/index.ts
+badd +187 src/services/project-training/index.ts
+badd +16 src/listeners/itercom/project-training/index.ts
+badd +1 src/app.ts
+badd +86 src/utils/intercom/providers/kafka.ts
+badd +1 src/utils/broadcaster/index.ts
+badd +1 package.json
 argglobal
 %argdel
-edit src/utils/to-bytes.ts
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
+edit src/utils/broadcaster/types/index.ts
 argglobal
-enew
-file fern://drawer:1/file:///Users/xtrapel/Workspace/projects/rectvision-api;\$
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-wincmd w
-argglobal
-balt src/utils/token/index.ts
+balt src/utils/broadcaster/providers/default.ts
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -69,9 +46,6 @@ keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -79,8 +53,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

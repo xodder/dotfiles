@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.dotfiles
+cd ~/Workspace/projects/fluxcloud
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,13 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +27 .bin/install.sh
-badd +1 .bin/install/install-manifest.sh
-badd +3 setup.sh
-badd +9 .git/config
+badd +1 fluxcloud-api/src/shared/utils/mediartc/index.ts
+badd +0 fluxcloud-api/nodemon.json
 argglobal
 %argdel
-edit setup.sh
+edit fluxcloud-api/nodemon.json
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -36,12 +34,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 147 + 89) / 178)
 argglobal
 enew
-file fern://drawer:1/file:///Users/xtrapel/.dotfiles;\$
-balt .bin/install/install-manifest.sh
+file fern://drawer:1/file:///Users/xtrapel/Workspace/projects/fluxcloud;\$
+balt fluxcloud-api/src/shared/utils/mediartc/index.ts
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -52,7 +50,6 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt .git/config
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -61,15 +58,15 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 3 - ((2 * winheight(0) + 23) / 47)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 044|
+keepjumps 1
+normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 102) / 204)
-exe 'vert 2resize ' . ((&columns * 173 + 102) / 204)
+exe 'vert 1resize ' . ((&columns * 30 + 89) / 178)
+exe 'vert 2resize ' . ((&columns * 147 + 89) / 178)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
