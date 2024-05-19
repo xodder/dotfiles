@@ -500,6 +500,14 @@ xmap <silent> <leader>cw <Plug>(coc-cursors-range)
 " use normal command like `<leader>coi(`
 nmap <leader>co  <Plug>(coc-cursors-operator)
 
+nmap <expr> <silent> <C-,> <SID>select_current_word()
+function! s:select_current_word()
+  if !get(b:, 'coc_cursors_activated', 0)
+    return "\<Plug>(coc-cursors-word)"
+  endif
+  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+endfunc
+
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
 

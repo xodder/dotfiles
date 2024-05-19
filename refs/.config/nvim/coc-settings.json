@@ -6,7 +6,9 @@
   "tailwindCSS.experimental.classRegex": [
     ["kamonaTv\\(\\{([^;]*);", "'([^']*)'"],
     ["kamonaTv\\(\\{([^;]*);", "\"([^\"]*)\""],
-    ["kamonaTv\\(\\{([^;]*);", "\\`([^\\`]*)\\`"]
+    ["kamonaTv\\(\\{([^;]*);", "\\`([^\\`]*)\\`"],
+    ["defineVariants\\(\\{([^;]*);", "'([^']*)'"],
+    ["defineVariants\\(\\{([^;]*);", "\"([^\"]*)\""],
   ],
   "languageserver": {
     // "ccls": {
