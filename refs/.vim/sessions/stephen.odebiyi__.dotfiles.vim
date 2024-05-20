@@ -18,10 +18,11 @@ badd +1 refs/.zshrc-addons
 badd +99 .bin/shared.sh
 badd +1 main.sh
 badd +1 LICENSE
-badd +0 ~/.dotfiles/.gitmodules
+badd +103 ~/.dotfiles/.gitmodules
+badd +1 .gitignore
 argglobal
 %argdel
-edit ~/.dotfiles/.gitmodules
+edit .gitignore
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -38,12 +39,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+exe 'vert 1resize ' . ((&columns * 56 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 130 + 93) / 187)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/.dotfiles;\$
-balt .bin/shared.sh
+balt ~/.dotfiles/.gitmodules
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -54,7 +55,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt LICENSE
+balt ~/.dotfiles/.gitmodules
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -63,15 +64,15 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 103 - ((0 * winheight(0) + 26) / 52)
+let s:l = 2 - ((1 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 103
-normal! 0
+keepjumps 2
+normal! 08|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+exe 'vert 1resize ' . ((&columns * 56 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 130 + 93) / 187)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
