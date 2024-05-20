@@ -27,7 +27,7 @@ badd +147 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verif
 badd +41 apps/frontoffice_ui/src/app/lean-shared/components/working-capital-upload-input/working-capital-upload-input.component.ts
 badd +50 apps/frontoffice_ui/src/app/lean-shared/components/working-capital-upload-input/working-capital-upload-input.component.html
 badd +11 apps/frontoffice_ui/src/app/lean-shared/components/working-capital-upload-input/modal/wlc-cameral-modal/wlc-cameral-modal.component.ts
-badd +46 apps/frontoffice_ui/src/app/core/services/wcl-service.service.ts
+badd +49 apps/frontoffice_ui/src/app/core/services/wcl-service.service.ts
 badd +111 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/components/business-address-information/business-address-information.component.ts
 badd +126 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/components/confirm-business-address-information/confirm-business-address-information.component.ts
 badd +124 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loans-entry/running-loans-entry.component.html
@@ -43,7 +43,7 @@ badd +119 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/com
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loan-repayment-schedule/running-loan-repayment-schedule.component.html
 badd +119 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/components/information-verification-entrypoint/information-verification-entrypoint.component.html
 badd +72 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/components/information-verification-entrypoint/information-verification-entrypoint.component.ts
-badd +56 apps/frontoffice_ui/src/app/working-capital-loans-v2/working-capital-loans-v2-routing.module.ts
+badd +23 apps/frontoffice_ui/src/app/working-capital-loans-v2/working-capital-loans-v2-routing.module.ts
 badd +39 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/information-verification.module.ts
 badd +27 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verification/information-verification-routing.module.ts
 badd +26 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loan-interest/partials/running-loan-interest-home-tab/running-loan-interest-home-tab.component.ts
@@ -59,9 +59,9 @@ badd +113 apps/frontoffice_ui/src/app/working-capital-loans-v2/information-verif
 badd +17 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/failed-metamap-verification/failed-metamap-verification.component.html
 badd +22 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/failed-metamap-verification/failed-metamap-verification.component.ts
 badd +71 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/pending-metamap-verification/pending-metamap-verification.component.ts
-badd +250 apps/frontoffice_ui/src/app/working-capital-loans-v2/shared-components/wcl-entry-point/wcl-entry-point.component.ts
+badd +117 apps/frontoffice_ui/src/app/working-capital-loans-v2/shared-components/wcl-entry-point/wcl-entry-point.component.ts
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/pending-metamap-verification/pending-metamap-verification.component.html
-badd +30 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/suspended-metamap-verification/suspended-metamap-verification.component.ts
+badd +46 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/suspended-metamap-verification/suspended-metamap-verification.component.ts
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loan-payment-history/partials/running-loan-payment-history-desktop/running-loan-payment-history-desktop.component.ts
 badd +99 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loan-payment-history/running-loan-payment-history.component.ts
 badd +52 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-loan-payment-history/partials/running-loan-payment-history-desktop/running-loan-payment-history-desktop.component.html
@@ -75,7 +75,7 @@ badd +13 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-accepta
 badd +231 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/loan-offer/loan-offer.component.html
 badd +102 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/tac/tac.component.ts
 badd +156 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/tac/tac.component.html
-badd +34 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/loan-acceptance-entry/loan-acceptance-entry.component.ts
+badd +126 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/loan-acceptance-entry/loan-acceptance-entry.component.ts
 badd +242 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/loan-acceptance-entry/loan-acceptance-entry.component.html
 badd +141 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-details/components/loan-approval-status/loan-approval-status.component.ts
 badd +156 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-details/components/loan-approval-status/loan-approval-status.component.html
@@ -104,7 +104,7 @@ badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-request/compon
 badd +72 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-request/components/loan-request-entry/components/loan-request-entry-v1/loan-request-entry-v1.component.ts
 badd +271 apps/frontoffice_ui/src/app/shared/utils/custom-form-control.ts
 badd +1 apps/frontoffice_backend/src/configmap/configmap.json
-badd +74 apps/frontoffice_backend/ci/templates/oci/configmap.yml
+badd +77 apps/frontoffice_backend/ci/templates/oci/configmap.yml
 badd +1 apps/frontoffice_backend/package.json
 badd +99 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/transaction-pin/transaction-pin.component.ts
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/overdraft-acceptance-disbursement/overdraft-acceptance-disbursement.component.html
@@ -180,12 +180,26 @@ badd +185 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-request/comp
 badd +328 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-overdraft-entry/running-overdraft-entry.component.html
 badd +131 apps/frontoffice_ui/src/app/core/helpers/api-client.helper.ts
 badd +8 apps/frontoffice_ui/src/app/working-capital-loans-v2/running-loans/components/running-overdraft-entry/running-overdraft-entry.component.scss
-badd +60 apps/frontoffice_backend/src/config.ts
-badd +580 apps/frontoffice_ui/src/app/shared/config/app-config.ts
+badd +62 apps/frontoffice_backend/src/config.ts
+badd +582 apps/frontoffice_ui/src/app/shared/config/app-config.ts
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-eligibility/components/processing-loan-offer-acceptance/processing-loan-offer-acceptance.component.ts
 badd +1 apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-eligibility/components/processing-loan-offer-acceptance/processing-loan-offer-acceptance.component.html
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/bvn-verification/bvn-verification-routing.module.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/bvn-verification/services/bvn-verification-store.service.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/bvn-verification/models/bvn-verfication.model.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/nibss-bvn-verification/nibss-bvn-verification-routing.module.ts
+badd +8 apps/frontoffice_ui/src/app/channels/onboarding/nibss-bvn-verification/nibss-bvn-verfication.routes.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/nibss-bvn-verification/nibss-bvn-verification.module.ts
+badd +60 apps/frontoffice_ui/src/app/channels/onboarding/onboarding/onboarding.module.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/onboarding/onboarding.component.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/onboarding/onboarding.component.scss
+badd +26 apps/frontoffice_ui/src/app/channels/onboarding/onboarding/onboarding-routing.module.ts
+badd +1 apps/frontoffice_ui/src/app/channels/onboarding/onboarding-v2/sign-up-v3/sign-up-v3.component.ts
+badd +3445 apps/frontoffice_ui/src/app/core/services/onboarding-v2.service.ts
+badd +1 apps/frontoffice_ui/src/app/core/services/wcl-auth-guard.service.ts
 argglobal
 %argdel
+tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
 argglobal
@@ -202,14 +216,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 10023 - ((22 * winheight(0) + 26) / 52)
+let s:l = 4509 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10023
-normal! 0
+keepjumps 4509
+normal! 036|
 tabnext
-edit apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-offer-acceptance/components/loan-acceptance-entry/loan-acceptance-entry.component.ts
+edit apps/frontoffice_ui/src/app/core/services/wcl-service.service.ts
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -227,7 +241,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 56 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 93 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 130 + 93) / 187)
 argglobal
 enew
 file fern://drawer:2/file:///Users/stephen.odebiyi/Workspace/moniepoint/moniepoint-frontoffice;\$
@@ -242,7 +256,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt apps/frontoffice_ui/src/app/working-capital-loans-v2/loan-eligibility/components/processing-loan-offer-acceptance/processing-loan-offer-acceptance.component.html
+balt apps/frontoffice_ui/src/app/core/services/wcl-auth-guard.service.ts
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -251,20 +265,60 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-36
+29
 normal! zo
-133
+53
 normal! zo
-let s:l = 137 - ((10 * winheight(0) + 26) / 52)
+87
+normal! zo
+88
+normal! zo
+89
+normal! zo
+408
+normal! zo
+409
+normal! zo
+410
+normal! zo
+451
+normal! zo
+452
+normal! zo
+481
+normal! zo
+495
+normal! zo
+517
+normal! zo
+537
+normal! zo
+538
+normal! zo
+539
+normal! zo
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 137
-normal! 021|
+keepjumps 1
+normal! 030|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 56 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 93 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 130 + 93) / 187)
+tabnext
+argglobal
+enew
+balt apps/frontoffice_ui/src/app/working-capital-loans-v2/working-capital-loans-v2-routing.module.ts
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
 tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -272,8 +326,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
