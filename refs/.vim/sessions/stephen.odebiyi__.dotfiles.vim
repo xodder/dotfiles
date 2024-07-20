@@ -20,15 +20,23 @@ badd +1 main.sh
 badd +1 LICENSE
 badd +103 ~/.dotfiles/.gitmodules
 badd +1 .gitignore
+badd +1 fugitive:///Users/stephen.odebiyi/.dotfiles/.git//
+badd +0 term://~/.dotfiles//72765:/bin/zsh
 argglobal
 %argdel
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
 edit .gitignore
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
+split
+1wincmd k
+wincmd _ | wincmd |
 vsplit
 1wincmd h
+wincmd w
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -39,8 +47,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe '1resize ' . ((&lines * 25 + 27) / 55)
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe '2resize ' . ((&lines * 25 + 27) / 55)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+exe '3resize ' . ((&lines * 26 + 27) / 55)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/.dotfiles;\$
@@ -64,16 +75,61 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 26) / 52)
+let s:l = 2 - ((1 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 2
 normal! 08|
 wincmd w
-2wincmd w
+argglobal
+if bufexists(fnamemodify("fugitive:///Users/stephen.odebiyi/.dotfiles/.git//", ":p")) | buffer fugitive:///Users/stephen.odebiyi/.dotfiles/.git// | else | edit fugitive:///Users/stephen.odebiyi/.dotfiles/.git// | endif
+if &buftype ==# 'terminal'
+  silent file fugitive:///Users/stephen.odebiyi/.dotfiles/.git//
+endif
+balt ~/.dotfiles/.gitmodules
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr=<<<<<<<<,>>>>>>>>
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 6 - ((5 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 6
+normal! 0
+wincmd w
+3wincmd w
+exe '1resize ' . ((&lines * 25 + 27) / 55)
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe '2resize ' . ((&lines * 25 + 27) / 55)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+exe '3resize ' . ((&lines * 26 + 27) / 55)
+tabnext
+argglobal
+if bufexists(fnamemodify("term://~/.dotfiles//72765:/bin/zsh", ":p")) | buffer term://~/.dotfiles//72765:/bin/zsh | else | edit term://~/.dotfiles//72765:/bin/zsh | endif
+if &buftype ==# 'terminal'
+  silent file term://~/.dotfiles//72765:/bin/zsh
+endif
+balt fugitive:///Users/stephen.odebiyi/.dotfiles/.git//
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 279 - ((51 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 279
+normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -81,8 +137,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
