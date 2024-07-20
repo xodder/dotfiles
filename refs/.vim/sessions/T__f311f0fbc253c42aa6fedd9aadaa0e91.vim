@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.dotfiles
+cd /private/var/folders/qd/j9gqyt995zvgwdr1df_41x4c0000gs/T/f311f0fbc253c42aa6fedd9aadaa0e91
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,16 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 manifest.txt
-badd +1 refs/.zshrc-addons
-badd +99 .bin/shared.sh
-badd +1 main.sh
-badd +1 LICENSE
-badd +103 ~/.dotfiles/.gitmodules
-badd +1 .gitignore
+badd +166 dist/index.d.ts
+badd +1 dist/generator.cjs
+badd +1 dist/chunk-JXBJZR5A.js
+badd +1 dist/transformer.js
+badd +1 dist/utils.js
+badd +0 transformer.js
 argglobal
 %argdel
-edit .gitignore
+edit transformer.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -43,8 +42,7 @@ exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 argglobal
 enew
-file fern://drawer:1/file:///Users/stephen.odebiyi/.dotfiles;\$
-balt ~/.dotfiles/.gitmodules
+file fern://drawer:1/file:///private/var/folders/qd/j9gqyt995zvgwdr1df_41x4c0000gs/T/f311f0fbc253c42aa6fedd9aadaa0e91;\$
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -55,7 +53,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt ~/.dotfiles/.gitmodules
+balt dist/utils.js
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -64,14 +62,13 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 26) / 52)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 08|
+keepjumps 1
+normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 tabnext 1
@@ -89,7 +86,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

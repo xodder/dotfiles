@@ -22,7 +22,7 @@ badd +1 docker-compose.yml
 badd +1 Dockerfile
 badd +1 env.js
 badd +1 src/config/index.ts
-badd +7 src/routes/index.tsx
+badd +4 src/routes/index.tsx
 badd +1 term://~/Workspace/moniepoint/moniepoint-wcl-ui//53339:/bin/zsh
 badd +1 src/utils/screen/use-sx.ts
 badd +12 src/utils/screen/use-screen-dependent-value.ts
@@ -31,7 +31,7 @@ badd +1 src/utils/screen/use-is-mobile.ts
 badd +101 src/utils/screen/breakpoints.ts
 badd +383 src/utils/xeate/xeate.ts
 badd +1 src/utils/xeate/index.ts
-badd +22 src/App.tsx
+badd +26 src/App.tsx
 badd +1 src/index.tsx
 badd +1 src/index.scss
 badd +1 src/App.scss
@@ -103,32 +103,32 @@ badd +83 src/pages/loan-request/info-collection/guarantors-info/guarantor-detail
 badd +153 src/pages/loan-request/info-collection/summary-and-confirmation/index.tsx
 badd +6 src/pages/loan-request/kyc-confirmation/shared/proof-of-information-alert-box.tsx
 badd +1 src/pages/loan-approval/.gitkeep
-badd +0 src/pages/loan-request/components/eligibility-check/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/business-employees-info/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/summary-and-confirmation/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-listing/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-detail/in-edit-state/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-detail/in-preview-state/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/guarantors-info/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/loan-amount-info/index.tsx
-badd +0 src/pages/loan-request/components/info-collection/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/shared/confirmation-text-input-box.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/shared/proof-of-information-alert-box.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/confirmation-state/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/shared/personal-info-summary-box.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-type-confirmation/confirmation-state/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-type-confirmation/shared/business-type-summary-box.tsx
+badd +1 src/pages/loan-request/components/eligibility-check/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/business-employees-info/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/summary-and-confirmation/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-listing/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-detail/in-edit-state/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/guarantors-info/guarantor-detail/in-preview-state/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/guarantors-info/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/loan-amount-info/index.tsx
+badd +1 src/pages/loan-request/components/info-collection/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/shared/confirmation-text-input-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/shared/proof-of-information-alert-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/confirmation-state/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/shared/personal-info-summary-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/personal-info-confirmation/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-type-confirmation/confirmation-state/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-type-confirmation/shared/business-type-summary-box.tsx
 badd +26 src/pages/loan-request/components/kyc-confirmation/business-type-confirmation/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/confirmation-state/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/shared/residential-address-summary-box.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/confirmation-state/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/residence-photo-list.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/residential-address-summary-box.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/expandable-image-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/confirmation-state/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/shared/residential-address-summary-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/residential-address-confirmation/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/confirmation-state/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/residence-photo-list.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/residential-address-summary-box.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/shared/expandable-image-box.tsx
 badd +176 src/pages/loan-request/components/kyc-confirmation/business-address-confirmation/index.tsx
-badd +0 src/pages/loan-request/components/kyc-confirmation/index.tsx
+badd +1 src/pages/loan-request/components/kyc-confirmation/index.tsx
 badd +15 src/pages/loan-request/components/offer-acceptance/index.tsx
 badd +82 src/pages/loan-request/components/primary-business-selection/index.tsx
 badd +19 src/pages/landing/components/account-suspended-state/index.tsx
@@ -163,7 +163,7 @@ normal! zt
 keepjumps 52
 normal! 0
 tabnext
-edit src/pages/landing/index.tsx
+edit src/App.tsx
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -196,7 +196,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt src/pages/loan-request/components/offer-acceptance/index.tsx
+balt src/index.tsx
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -205,23 +205,18 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-8
-normal! zo
-9
-normal! zo
-let s:l = 12 - ((11 * winheight(0) + 26) / 52)
+let s:l = 26 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 12
-normal! 04|
+keepjumps 26
+normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 tabnext
 edit src/pages/landing/index.tsx
 argglobal
-1argu
 balt src/pages/loan-request/index.tsx
 setlocal fdm=indent
 setlocal fde=0
@@ -250,6 +245,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

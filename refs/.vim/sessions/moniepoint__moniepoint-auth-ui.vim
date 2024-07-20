@@ -13,14 +13,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +26 src/pages/login/variations/ng-login/ng-login.tsx
+badd +52 src/pages/login/variations/ng-login/ng-login.tsx
 badd +1 src/index.tsx
 badd +5 postcss.config.js
 badd +1 src/App.scss
 badd +31 src/layouts/auth-layout.tsx
 badd +3 src/components/icons/lock-icon.tsx
 badd +1 src/components/icons/mail-icon.tsx
-badd +25 src/pages/login/variations/shared/forgot-credentials-snippet.tsx
+badd +36 src/pages/login/variations/shared/forgot-credentials-snippet.tsx
 badd +8 src/components/brand-shaped-box/brand-shaped-box.tsx
 badd +6 src/components/icons/user-alt-icon.tsx
 badd +18 src/components/icon/icon.tsx
@@ -113,7 +113,7 @@ badd +1 src/pages/device-registration/variations/ng-device-registration/desktop/
 badd +1 src/api/index.ts
 badd +16 src/components/brand-shaped-box/brand-shaped-box.types.ts
 badd +1 src/utils/delay.ts
-badd +55 src/App.tsx
+badd +61 src/App.tsx
 badd +55 src/config/index.ts
 badd +1 src/api/helpers/auth/device-registration/use-ke-register-device.ts
 badd +26 src/api/helpers/auth/device-registration/use-ng-register-device.ts
@@ -135,7 +135,7 @@ badd +3 src/components/icons/info-icon.tsx
 badd +11 src/components/icon/icon.types.ts
 badd +1 src/components/textfield/textfield.types.ts
 badd +1 src/components/segmented-textfield/segmented-textfield.types.ts
-badd +1 src/components/secure-textfield/secure-textfield.tsx
+badd +7 src/components/secure-textfield/secure-textfield.tsx
 badd +1 src/components/page/page.tsx
 badd +1 src/components/modal/modal.types.ts
 badd +20 src/components/link/link.types.ts
@@ -158,13 +158,13 @@ badd +6 src/components/backdrop/backdrop.types.ts
 badd +1 src/components/backdrop/backdrop.scss
 badd +1195 ~/.config/coc/extensions/node_modules/coc-tsserver/node_modules/typescript/lib/lib.es5.d.ts
 badd +67 src/pages/shared/app-bar/app-bar.tsx
-badd +91 src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
-badd +1 src/pages/password-recovery/variations/shared/password-strength-box.tsx
+badd +65 src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
+badd +123 src/pages/password-recovery/variations/shared/password-strength-box.tsx
 badd +104 src/pages/password-recovery/variations/ke-password-recovery/components/otp-verification-form.tsx
 badd +104 src/pages/password-recovery/variations/ng-password-recovery/ng-password-recovery.tsx
 badd +105 src/pages/password-recovery/variations/ng-password-recovery/components/otp-verification-form.tsx
 badd +1865 yarn.lock
-badd +51 src/pages/password-recovery/variations/ng-password-recovery/components/password-creation-form.tsx
+badd +1 src/pages/password-recovery/variations/ng-password-recovery/components/password-creation-form.tsx
 badd +1 src/pages/login/variations/shared/login-page-husk.tsx
 badd +50 src/pages/password-recovery/variations/ke-password-recovery/components/password-creation-form.tsx
 badd +1 src/pages/device-registration/variations/ng-device-registration/index.ts
@@ -191,12 +191,13 @@ badd +1 src/api/helpers/auth/device-registration/use-ke-send-otp.ts
 badd +1 src/routes/index.tsx
 badd +1 dist/assets/auth.js
 badd +1 src/components/page/page.scss
+badd +1 ~/.dotfiles/refs/.config/nvim/coc-settings.json
 argglobal
 %argdel
 $argadd src/pages/shared/inner-content-box/index.ts
 tabnew +setlocal\ bufhidden=wipe
 tabrewind
-edit src/pages/password-recovery/variations/ke-password-recovery/ke-password-recovery.tsx
+edit ~/.dotfiles/refs/.config/nvim/coc-settings.json
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -213,8 +214,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/Workspace/moniepoint/moniepoint-auth-ui;\$
@@ -229,7 +230,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt src/components/page/page.scss
+balt src/pages/password-recovery/variations/shared/password-strength-box.tsx
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -238,32 +239,40 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-46
-normal! zo
-55
-normal! zo
-56
-normal! zo
-57
-normal! zo
-63
-normal! zo
-65
-normal! zo
-let s:l = 65 - ((22 * winheight(0) + 26) / 52)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 65
+keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 183 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 tabnext
-edit src/pages/login/variations/shared/forgot-credentials-snippet.tsx
+edit src/config/index.ts
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
 argglobal
-balt src/pages/login/variations/ng-login/ng-login.tsx
-setlocal fdm=syntax
+enew
+file fern://drawer:2/file:///Users/stephen.odebiyi/Workspace/moniepoint/moniepoint-auth-ui;\$
+balt src/components/secure-textfield/secure-textfield.tsx
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -271,30 +280,42 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-60
-normal! zo
-62
-normal! zo
-let s:l = 26 - ((25 * winheight(0) + 26) / 52)
+wincmd w
+argglobal
+balt src/pages/login/variations/ng-login/ng-login.tsx
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 43 - ((42 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 26
-normal! 013|
-tabnext 1
+keepjumps 43
+normal! 05|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

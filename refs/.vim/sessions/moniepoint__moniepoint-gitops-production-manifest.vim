@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.dotfiles
+cd ~/Workspace/moniepoint/moniepoint-gitops-production-manifest
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,16 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 manifest.txt
-badd +1 refs/.zshrc-addons
-badd +99 .bin/shared.sh
-badd +1 main.sh
-badd +1 LICENSE
-badd +103 ~/.dotfiles/.gitmodules
-badd +1 .gitignore
+badd +218 moniepoint-frontoffice-ui-v2/configmap.yml
+badd +78 moniepoint-beta/moniepoint-frontoffice-ui-v2/configmap.yml
 argglobal
 %argdel
-edit .gitignore
+edit moniepoint-beta/moniepoint-frontoffice-ui-v2/configmap.yml
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -39,23 +34,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+exe 'vert 1resize ' . ((&columns * 93 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 93 + 93) / 187)
 argglobal
-enew
-file fern://drawer:1/file:///Users/stephen.odebiyi/.dotfiles;\$
-balt ~/.dotfiles/.gitmodules
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-wincmd w
-argglobal
-balt ~/.dotfiles/.gitmodules
+balt moniepoint-frontoffice-ui-v2/configmap.yml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -64,16 +46,38 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 26) / 52)
+let s:l = 78 - ((25 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 08|
+keepjumps 78
+normal! 047|
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+argglobal
+if bufexists(fnamemodify("moniepoint-frontoffice-ui-v2/configmap.yml", ":p")) | buffer moniepoint-frontoffice-ui-v2/configmap.yml | else | edit moniepoint-frontoffice-ui-v2/configmap.yml | endif
+if &buftype ==# 'terminal'
+  silent file moniepoint-frontoffice-ui-v2/configmap.yml
+endif
+balt moniepoint-beta/moniepoint-frontoffice-ui-v2/configmap.yml
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+7
+normal! zo
+let s:l = 220 - ((23 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 220
+normal! 054|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 93 + 93) / 187)
+exe 'vert 2resize ' . ((&columns * 93 + 93) / 187)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

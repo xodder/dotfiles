@@ -43,11 +43,20 @@ badd +76 apps/kamona_stories/src/alert.stories.tsx
 badd +1 lib/v2/components/src/button/button.tsx
 badd +78 lib/v2/components/src/button/button.cx.ts
 badd +3 lib/v2/utils/src/to-non-interactive-element.ts
-badd +0 lib/v2/system/src/utils/forward-ref.ts
-badd +0 lib/v2/system/src/types.ts
+badd +1 lib/v2/system/src/utils/forward-ref.ts
+badd +1 lib/v2/system/src/types.ts
+badd +1 lib/v2/system/src/helpers/color-variants.ts
+badd +1 lib/v2/components/src/text-input/data-attr.ts
+badd +1 lib/v2/components/src/text-input/text-input.cx.ts
+badd +1 lib/v2/components/src/text-input/text-input.stories.tsx
+badd +1 lib/v2/components/src/text-input/text-input.tsx
+badd +1 lib/v2/components/src/text-input/use-controlled-state.ts
+badd +1 lib/v2/components/src/text-input/use-text-input.ts
+badd +1 lib/v2/components/jest.setup.ts
+badd +1 lib/v2/components/jest.config.ts
 argglobal
 %argdel
-edit lib/v2/system/src/utils/forward-ref.ts
+edit lib/v2/components/jest.setup.ts
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -84,7 +93,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-balt lib/v2/system/src/types.ts
+balt lib/v2/components/jest.config.ts
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -114,14 +123,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 72 - ((48 * winheight(0) + 26) / 52)
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 72
+keepjumps 1
 normal! 0
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 77 + 93) / 187)
 exe 'vert 3resize ' . ((&columns * 78 + 93) / 187)

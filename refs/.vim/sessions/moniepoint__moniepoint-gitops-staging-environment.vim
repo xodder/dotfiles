@@ -13,12 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +67 moniepoint-frontoffice-ui-v2/configmap.yml
+badd +76 moniepoint-frontoffice-ui-v2/configmap.yml
 badd +1 moniepoint-frontoffice-ui-v2/service.yml
-badd +1 moniepoint-frontoffice-ui-v2/deployment.yml
+badd +37 moniepoint-frontoffice-ui-v2/deployment.yml
+badd +1 frontoffice-ui/deployment.yml
+badd +1 moniepoint-frontoffice-ui-v2/vector-config.yml
+badd +1 moniepoint-frontoffice-ui-v2/ingress.yml
 argglobal
 %argdel
-edit moniepoint-frontoffice-ui-v2/configmap.yml
+edit moniepoint-frontoffice-ui-v2/deployment.yml
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -35,12 +38,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+wincmd =
 argglobal
 enew
 file fern://drawer:1/file:///Users/stephen.odebiyi/Workspace/moniepoint/moniepoint-gitops-staging-environment;\$
-balt moniepoint-frontoffice-ui-v2/deployment.yml
+balt moniepoint-frontoffice-ui-v2/configmap.yml
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -51,6 +53,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
+balt moniepoint-frontoffice-ui-v2/configmap.yml
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -59,16 +62,26 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 55 - ((0 * winheight(0) + 26) / 52)
+9
+normal! zo
+14
+normal! zo
+18
+normal! zo
+19
+normal! zo
+29
+normal! zo
+36
+normal! zo
+let s:l = 29 - ((27 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 55
-normal! 048|
+keepjumps 29
+normal! 026|
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
-exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
+wincmd =
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -84,6 +97,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

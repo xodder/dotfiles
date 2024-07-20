@@ -330,7 +330,7 @@ function! s:init_fern() abort
   nmap <buffer> <c-c> <Plug>(fern-action-clipboard-copy)
   nmap <buffer> <c-x> <Plug>(fern-action-clipboard-move)
   nmap <buffer> <c-v> <Plug>(fern-action-clipboard-paste)
-  nmap <buffer> <c-d> <Plug>(fern-action-clipboard-clear)
+  " nmap <buffer> <c-d> <Plug>(fern-action-clipboard-clear)
 
   " nmap <buffer> g <Plug>(fern-action-grep)
   nmap <buffer> <c-t> <Plug>(fern-action-terminal:edit-or-split)

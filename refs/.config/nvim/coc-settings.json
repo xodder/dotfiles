@@ -4,11 +4,9 @@
     "typescript": "javascript"
   },
   "tailwindCSS.experimental.classRegex": [
-    ["kamonaTv\\(\\{([^;]*);", "'([^']*)'"],
-    ["kamonaTv\\(\\{([^;]*);", "\"([^\"]*)\""],
-    ["kamonaTv\\(\\{([^;]*);", "\\`([^\\`]*)\\`"],
     ["defineVariants\\(\\{([^;]*);", "'([^']*)'"],
     ["defineVariants\\(\\{([^;]*);", "\"([^\"]*)\""],
+    ["defineVariants\\(\\{([^;]*);", "\\`([^\\`]*)\\`"],
   ],
   "languageserver": {
     // "ccls": {
