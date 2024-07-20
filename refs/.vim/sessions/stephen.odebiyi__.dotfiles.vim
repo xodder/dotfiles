@@ -19,7 +19,7 @@ badd +99 .bin/shared.sh
 badd +1 main.sh
 badd +1 LICENSE
 badd +103 ~/.dotfiles/.gitmodules
-badd +1 .gitignore
+badd +2 .gitignore
 badd +1 term://~/.dotfiles//72765:/bin/zsh
 argglobal
 %argdel
@@ -72,7 +72,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 2
-normal! 017|
+normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 93) / 187)
 exe 'vert 2resize ' . ((&columns * 156 + 93) / 187)
@@ -90,11 +90,11 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 71 - ((0 * winheight(0) + 26) / 52)
+let s:l = 139 - ((51 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 71
+keepjumps 139
 normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
