@@ -101,3 +101,6 @@
 [submodule "refs/.vim/pack/vendor/start/coc-flutter"]
 	path = refs/.vim/pack/vendor/start/coc-flutter
 	url = https://github.com/iamcco/coc-flutter
+[submodule "refs/.vim/pack/vendor/start/vim-floaterm"]
+	path = refs/.vim/pack/vendor/start/vim-floaterm
+	url = https://github.com/voldikss/vim-floaterm

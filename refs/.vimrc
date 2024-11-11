@@ -539,5 +539,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " match-up
 let g:matchup_matchparen_offscreen = {'method': 'popup'}
 
-" vim-notes
-let g:notes_directories = ['~/Documents/Notes']
+" floaterm
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
+
+let g:floaterm_keymap_new = '<leader>to'
+let g:floaterm_keymap_next = '<leader>tn'
+let g:floaterm_keymap_prev = '<leader>tp'
+let g:floaterm_keymap_kill = '<leader>tk'
+
+nmap <silent> <leader>lg :<C-u>FloatermNew lazygit<CR>
