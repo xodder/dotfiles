@@ -1,0 +1,6 @@
+gui:
+  mouseEvents: false
+  nerdFontsVersion: "3"
+  theme:
+    selectedLineBgColor:
+      - reverse

@@ -2,3 +2,4 @@ link:.zshrc-addons
 link:.vim
 link:.vimrc
 link:.config/nvim
+link:.config/lazygit
