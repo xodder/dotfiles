@@ -7,6 +7,8 @@ set nowritebackup
 
 set updatetime=300
 
+let g:python3_host_prog = expand('~/.pyenv/versions/py3nvim/bin/python')
+
 "always enable syntax highlighting
 if has("syntax")
   syntax on
