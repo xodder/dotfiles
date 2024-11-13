@@ -9,6 +9,7 @@ alias nd="mkdir"
 alias nf="touch"
 alias fd="rm -rf"
 alias dotfiles="$DOTFILES_DIR/main.sh"  
+alias lg="lazygit"
 
 # install vim plugins as submodule
 function vimadd() {
