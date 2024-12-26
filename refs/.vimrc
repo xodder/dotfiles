@@ -547,7 +547,23 @@ let g:floaterm_height = 0.9
 
 let g:floaterm_keymap_new = '<leader>to'
 let g:floaterm_keymap_next = '<leader>tn'
+let g:floaterm_keymap_show = '<leader>ts'
 let g:floaterm_keymap_prev = '<leader>tp'
 let g:floaterm_keymap_kill = '<leader>tk'
 
-nmap <silent> <leader>lg :<C-u>FloatermNew lazygit<CR>
+nmap <silent> <leader>tl :<C-u>FloatermNew lazygit<CR>
+
+
+" sideways - 'a' -> argument
+nnoremap <leader>al :SidewaysLeft<cr>
+nnoremap <leader>ar :SidewaysRight<cr>
+
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
+nmap <leader>ai <Plug>SidewaysArgumentInsertBefore
+nmap <leader>aa <Plug>SidewaysArgumentAppendAfter
+nmap <leader>aI <Plug>SidewaysArgumentInsertFirst
+nmap <leader>aA <Plug>SidewaysArgumentAppendLast

@@ -7,6 +7,9 @@
     ["defineVariants\\(\\{([^;]*);", "'([^']*)'"],
     ["defineVariants\\(\\{([^;]*);", "\"([^\"]*)\""],
     ["defineVariants\\(\\{([^;]*);", "\\`([^\\`]*)\\`"],
+    ["mergeClassNames\\(\\{([^;]*);", "'([^']*)'"],
+    ["mergeClassNames\\(\\{([^;]*);", "\"([^\"]*)\""],
+    ["mergeClassNames\\(\\{([^;]*);", "\\`([^\\`]*)\\`"],
   ],
   "languageserver": {
     // "ccls": {

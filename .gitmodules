@@ -104,3 +104,6 @@
 [submodule "refs/.vim/pack/vendor/start/vim-floaterm"]
 	path = refs/.vim/pack/vendor/start/vim-floaterm
 	url = https://github.com/voldikss/vim-floaterm
+[submodule "refs/.vim/pack/vendor/start/sideways.vim"]
+	path = refs/.vim/pack/vendor/start/sideways.vim
+	url = https://github.com/AndrewRadev/sideways.vim.git
