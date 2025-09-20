@@ -384,9 +384,22 @@ let g:closetag_shortcut = '>'
 "-- coc
 "---------------------------
 
-"make <Tab> trigger completion with characters ahead and navigate
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+" Make <tab> used for trigger completion, completion confirm, snippet expand and jump like VSCode
+" used to be coc#_select_confirm()
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 "make <CR> to accept selected completion item or to notify coc to format
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
@@ -537,6 +550,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " match-up
 let g:matchup_matchparen_offscreen = {'method': 'popup'}
