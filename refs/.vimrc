@@ -582,3 +582,25 @@ nmap <leader>ai <Plug>SidewaysArgumentInsertBefore
 nmap <leader>aa <Plug>SidewaysArgumentAppendAfter
 nmap <leader>aI <Plug>SidewaysArgumentInsertFirst
 nmap <leader>aA <Plug>SidewaysArgumentAppendLast
+
+" vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+
+nmap <leader>dc <Plug>VimspectorContinue
+nmap <leader>dl <Plug>VimspectorLaunch
+nmap <leader>dh <Plug>VimspectorStop
+nmap <leader>dr <Plug>VimspectorRestart
+nmap <leader>dp <Plug>VimspectorPause
+nmap <leader>dk :VimspectorReset<CR><CR>
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+nmap <leader>dcb <Plug>VimspectorToggleConditionalBreakpoint
+nmap <leader>dfb <Plug>VimspectorAddFunctionBreakpoint
+nmap <leader>dtc <Plug>VimspectorRunToCursor
+nmap <leader>dso <Plug>VimspectorStepOver
+nmap <leader>dsi <Plug>VimspectorStepInto
+nmap <leader>dsb <Plug>VimspectorStepOut
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
