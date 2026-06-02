@@ -73,7 +73,7 @@ set splitright
 "correcting <TAB> behaviour
 set tabstop=2
 set shiftwidth=2
-set expandtab
+set noexpandtab
 
 "configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -111,6 +111,11 @@ set foldnestmax=20
 set foldlevelstart=99
 
 set wildignore+=*node_modules/**
+
+" configure indicators
+set listchars=eol:↓,tab:⇾→┊,trail:●,extends:…,precedes:…,space:·
+
+:nmap <leader>l :set invlist<cr>
 
 "add <> to matching-pairs
 " set mps+=<:>
