@@ -110,3 +110,6 @@
 [submodule "refs/.vim/pack/vendor/start/vimspector"]
 	path = refs/.vim/pack/vendor/start/vimspector
 	url = https://github.com/puremourning/vimspector
+[submodule "refs/.vim/pack/vendor/start/vim-caser"]
+	path = refs/.vim/pack/vendor/start/vim-caser
+	url = https://github.com/arthurxavierx/vim-caser.git

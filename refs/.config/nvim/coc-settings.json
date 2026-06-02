@@ -3,6 +3,7 @@
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript"
   },
+  "prettier.singleQuote": true,
   "tailwindCSS.experimental.classRegex": [
     ["defineVariants\\(\\{([^;]*);", "'([^']*)'"],
     ["defineVariants\\(\\{([^;]*);", "\"([^\"]*)\""],
